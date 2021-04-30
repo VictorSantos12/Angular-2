@@ -1,0 +1,9 @@
+<section name="Menu Section" *ngIf="AuthService.Authenticated()">
+  <app-menu></app-menu>
+</section>
+
+<section name="LogIn Section" *ngIf="!AuthService.Authenticated()">
+   <router-outlet></router-outlet> 
+</section>
+
+

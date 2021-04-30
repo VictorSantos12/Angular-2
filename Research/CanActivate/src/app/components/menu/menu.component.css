@@ -1,0 +1,16 @@
+.navbar {
+  height: 12vh;
+}
+
+button {
+  color: white;
+  cursor: pointer;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  color: rgb(0, 0, 0);
+}

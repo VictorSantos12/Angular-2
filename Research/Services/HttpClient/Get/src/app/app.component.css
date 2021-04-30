@@ -1,0 +1,20 @@
+
+.nav-item {
+    margin: 10px;
+}
+
+img {
+    width: 15%;
+    cursor: pointer;
+    outline: none;
+}
+
+
+button {
+    border: none;
+    background-color: black;
+}
+
+.collapse ul li a {
+    color: yellow;
+}

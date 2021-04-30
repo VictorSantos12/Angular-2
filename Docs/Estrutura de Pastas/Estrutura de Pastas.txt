@@ -1,0 +1,117 @@
+<h3>Estrutura de Pastas de Um Projeto em Angular CLI</h3>
+  	
+e2e 
+  
+  ><h5>Protractror (Framework de teste padrão do Angular);</h5>
+
+node_modules  
+   
+  ><h5>Dependências disponibilizadas pelo npm;</h5>
+
+src    
+   
+  ><h5>Código-fonte do projeto;</h5>
+
+.browserslistrc 
+
+.editorconfig 
+   
+  ><h5>Configurações referentes ao editor de código;</h5>
+
+.gitignore 
+   
+  ><h5>Contém os arquivos a serem ignorados em possível commit;</h5>
+
+angular.json  
+   
+  ><h5>Contém as configurações do Angular CLI;</h5>
+
+package-lock.json 
+   
+  ><h5>Contém as versões das dependências INSTALADAS
+   no node_modules da aplicação;</h5>
+        
+package.json 
+   
+  ><h5>Contém as informações sobre as dependências
+  >que a aplicação precisa e os comandos que podem
+  >facilitar o processo de desenvolvimento;</h5>
+              
+README.md 
+  
+  ><h5>Arquivos de apresentação do projeto;</h5>
+ 
+tsconfig.json 
+
+  ><h5>Configuração do typescript. Em um momento oportuno
+  >criarei um artigo explicitando essa configuração.</h5>
+        
+tslint.json 
+   
+  ><h5>Configurações do linter de typescript. O linter é uma ferramenta de correção automatica 
+  >da estrutura sintática do nosso código, sendo essa especifica para Typescript. </h5>       
+ 
+
+<h3>Componentes e Funções da Pasta src</h3>
+
+src/app
+
+<b>app.component.css</b>
+
+ ><h5>Arquivo responsável pelo estilo do nosso módulo
+  >Angular nós trabalhamos com os estilos separados para cada componente,
+  >assim conseguimos ter um desacoplamento de estilos;</h5>
+        
+<b>app.component.html</b> 
+
+ ><h5>Arquivo HTML do nosso componente App;</h5>
+        
+<b>app.component.spec.ts</b> 
+
+ ><h5>Arquivo de teste do nosso componente;</h5>
+      	
+
+<b>app.component.ts</b> 
+
+ ><h5>Pensando em uma arquitetura MVC, esse arquivo teria as mesmas
+  >responsabilidades das nossas Controllers;</h5>
+
+<b>app.module.ts</b>
+
+  ><h5>O Angular é um framework modular, ele precisa de
+   >um ou mais módulos para que possamos gerenciar os nossos componentes,
+   >esse módulo acaba sendo um default, mas podemos criar outros modules
+   >e chamar eles dentro dele.</h5>
+
+src/assets
+
+  ><h5>Esse diretório nos permite trabalhar com arquivos extras a nossa aplicação,
+   como as nossas imagens;</h5>
+
+src/environments 
+
+  ><h5>Aqui nós temos dois arquivos .ts, um para o nosso ambiente de
+   >produção e um outro para o nosso ambiente de desenvolvimento.
+   >Nele nós adicionamos tarefas como a variável production que vem
+   >setada como true em produção e false em desenvolvimento;</h5>
+
+src/index.html 
+
+  ><h5>Esse seria o nosso arquivo root, dentro dele rodamos a nossa SPA
+   >(Single Page Application);</h5>
+  
+src/main.ts
+        
+  ><h5>Esse é o arquivo principal da nossa Solution. Ele vem definido
+   >dentro do nosso arquivo angular-cli.json, esse seria o bootstrap da nossa
+   >aplicação;</h5>
+
+
+src/polyfills.ts 
+
+  ><h5>Esse arquivo funciona como um tradutor para diferentes versões do ES;</h5>
+  
+
+src/tsconfig.app.json e tsconfig.spec.json
+        
+  ><h5>São os nossos arquivos de configuração do TypeScript.</h5>

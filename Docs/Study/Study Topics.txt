@@ -1,0 +1,42 @@
+
+
+  */Angular Study Topics/*
+
+   ~ Iniciar Curso 
+
+     Angular 2+ Loiane Groner
+
+   ~ Directives
+
+     *ngFor
+     *ngIf
+
+   ~ HttpClient
+
+     .get
+     .post
+     .delete
+     .update
+
+   ~ Angular Decorators
+    
+     @Input
+     @Output
+
+   ~ Classes Distintas e Seus Métodos
+
+     OnChanges
+     EventEmitter
+    
+   ~ Libs e Suas Funções
+
+     Rxjs
+
+   Todo final de semana criar exercícios referentes aos tópicos vistos.
+   Cada novo assunto ou funcionalidade vistos no estágio passarão a fazer
+   parte da lista de tópicos a serem estudados e revistos.
+
+
+  
+
+  

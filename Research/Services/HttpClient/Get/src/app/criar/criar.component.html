@@ -1,0 +1,70 @@
+<section id="body">
+    <div id="main">
+        <h1>Cadastro</h1>
+        <form 
+         (submit) = "onSubmit()"
+         [formGroup] = 'formularioNoticia'>
+          <div class="input-area">
+            <h5 class="card-title">Status</h5>
+            <input 
+             class="form-control me-2" 
+             type="text"
+             formControlName ="status">
+             <span *ngIf ="formularioNoticia.controls['status'].dirty && formularioNoticia.controls['status'].hasError('required')"
+             style="color: red;">
+               Preencha o campo corretamente
+              </span>
+              <span *ngIf="formularioNoticia.controls['status'].hasError('maxlength')"  style="color: red;">
+                Número máximo de campos preenchido
+              </span>
+           </div>
+          <div class="input-area">
+           <h5 class="card-title">Título</h5>
+            <input 
+             class="form-control me-2" 
+             type="string"
+             formControlName ="titulo">
+             <span *ngIf ="formularioNoticia.controls['titulo'].dirty && formularioNoticia.controls['titulo'].hasError('required') " style="color: red;">
+               Preencha o campo corretamente
+             </span>
+          </div>
+          <div class="input-area">
+            <h5 class="card-title">Autor</h5>
+            <input 
+             class="form-control me-2" 
+             type="text"
+             formControlName ="autor">
+             <span *ngIf ="formularioNoticia.controls['autor'].dirty && formularioNoticia.controls['autor'].hasError('required') " style="color: red;">
+               Preencha o campo corretamente
+             </span>
+          </div>
+          <div class="input-area">
+            <h5 class="card-title">Notícia</h5>
+            <textarea 
+             class="form-control me-2" 
+             formControlName ="descricao">
+            </textarea>
+            <span *ngIf ="formularioNoticia.controls['descricao'].dirty && formularioNoticia.controls['descricao'].hasError('required') " style="color: red;">
+              Preencha o campo corretamente
+             </span>
+          </div>
+          <div class="button-area">
+            <button 
+             type="submit" 
+             class="btn btn-dark"
+             style="background-color: black;"
+             >
+             Criar
+            </button>
+            <button 
+             type="button" 
+             class="btn btn-dark"
+             (click) = "onCancel()"
+             style="background-color: black;"
+             >
+             Cancelar
+            </button>
+          </div>
+        </form>
+    </div>
+</section>

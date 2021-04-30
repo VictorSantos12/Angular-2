@@ -1,0 +1,30 @@
+<h1 style="margin-bottom: 40px;">Template-driven</h1>
+
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="mb-3">
+      <label 
+       for="exampleInputEmail1" 
+       class="form-label">Email address</label>
+      <input 
+       type="email" 
+       class="form-control" 
+       name="email"
+       ngModel
+       >
+    </div>
+    <div class="mb-3">
+      <label 
+       class="form-label">Password</label>
+      <input 
+       type="password" 
+       class="form-control" 
+       name="password"
+       ngModel
+       >
+    </div>
+    <button 
+     type="submit" 
+     class="btn btn-primary">Submit</button>
+  </form>
+
+  <h3>Observe o resultado no console</h3>

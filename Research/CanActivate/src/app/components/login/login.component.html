@@ -1,0 +1,65 @@
+<section id="main">
+ <div class="left">
+   <div class="block">
+    <div class="logo mb-5">
+      <img style="width: 40%;" src="../assets/logo-login.svg">
+   </div>
+ <form
+  (submit) = "loginValidation()"
+   [formGroup] = 'formGroup'
+  >
+   <div class="mb-4">
+     <label class="form-label"><strong>CPF</strong></label>
+     <input
+       type="text"
+       class="form-control"
+       mask="000.000.000-00"
+       formControlName = "Usuario"
+       >
+     <span *ngIf="formGroup.controls['Usuario'].hasError('required') && formGroup.controls['Usuario'].dirty" style="color: red;">
+       Você precisa preencher todos os campos
+     </span> 
+     <span *ngIf="formGroup.controls['Usuario'].hasError('maxlength')" style="color: red;">
+       Ops, você excedeu o número de caracteres!
+     </span> 
+   </div>
+ 
+   <div class="mb-4">
+     <label class="form-label"><strong>SENHA</strong></label>
+     <input
+       type="password"
+       class="form-control"
+       formControlName= "Senha">
+     <span *ngIf="formGroup.controls['Senha'].hasError('required') && formGroup.controls['Senha'].dirty" style="color: red;">
+       Você precisa preencher todos os campos
+     </span>
+     <span *ngIf="formGroup.controls['Senha'].hasError('minlength')" style="color: red;">
+      Ops, o número mínimo de caracteres é 6!
+    </span> 
+   </div>
+
+   <button
+     style="width: 100%; font-weight: bold; background-color: rgb(232, 236, 0); cursor: pointer;"
+     type="submit"
+     class="btn">log in</button>
+ </form>
+ <div class="password mt-4">
+   <a
+     href="#"
+     style="color: black;"
+     class="link-dark">Esqueci minha senha</a>
+ </div>
+     </div>
+   </div>
+     <div class="right">
+       <h2>All You need is us!</h2>
+       <img style="width: 40%;" src="../assets/bg.png">
+       <p>Nos conheça através de...</p>
+       <button 
+        style="border-color: rgb(232, 236, 0); color: rgb(232, 236, 0);" 
+        type="button" 
+        class="btn btn-outline">Ayu!gate.com.br</button>
+     </div>
+ </section>
+ 
+ 

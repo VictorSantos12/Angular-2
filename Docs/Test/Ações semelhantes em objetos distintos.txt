@@ -1,0 +1,18 @@
+
+   //Loading que se baseia na posição index do objeto para acontecer
+   retornoInformeRendimento(data: InformeRendimentoData[]){
+       if(data) {
+
+       this.informRendimentoData = data;
+
+     //Criando novo objeto manualmente para teste
+     >>this.informRendimentoData.push({id: 43,status: 1, anoReferencia: '2021', retorno: 'hhh'});
+
+       this.informRendimentoData = this.informRendimentoData.map(object => {
+        object["_loading"] = false;
+        return object;
+      });
+       
+      console.log(this.informRendimentoData);
+     }
+  }

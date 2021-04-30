@@ -1,0 +1,51 @@
+   <h1 style="margin-bottom: 40px;">Reactive</h1>
+   
+   <form 
+     (submit) = 'onSubmit()'
+     [formGroup] ='reativeForm'
+     >
+    <div class="mb-3">
+      <label 
+         class="form-label">Name</label>
+        <input 
+         type="text" 
+         class="form-control" 
+         formControlName = "name"
+         >
+         <span *ngIf="reativeForm.controls['name'].dirty && reativeForm.controls['name'].hasError('required')"
+         style="color: red;">
+             Digite corretamente
+         </span>
+      </div>
+    <div class="mb-3">
+      <label
+       class="form-label">Email address</label>
+      <input 
+       type="text" 
+       class="form-control" 
+       formControlName = "email"
+       >
+       <span *ngIf="reativeForm.controls['email'].dirty && reativeForm.controls['email'].hasError('required')" 
+       style="color: red;">
+           Digite corretamente
+       </span>
+    </div>
+    <div class="mb-3">
+      <label 
+       class="form-label">Password</label>
+      <input 
+       type="password" 
+       class="form-control" 
+       formControlName = "password"
+       >
+       <span *ngIf="reativeForm.controls['password'].dirty && reativeForm.controls['password'].hasError('required')"
+       style="color: red;">
+        Digite corretamente
+       </span>
+    </div>
+    <button 
+     type="submit" 
+     class="btn btn-primary">Submit</button>
+  </form>
+
+  <h3>Observe o resultado no console</h3>

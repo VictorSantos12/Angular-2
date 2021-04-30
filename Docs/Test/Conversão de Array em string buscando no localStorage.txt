@@ -1,0 +1,12 @@
+
+ //LocalStorage guarda os dados que são acessados várias vezes na aplicação
+
+    acessarUsuario(): string {
+    let usuario = JSON.parse(localStorage.getItem('user'));
+
+    if(usuario){
+      return usuario.nome;
+    }else{
+      return 'shopper';
+    }
+  }

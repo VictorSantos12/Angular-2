@@ -1,0 +1,28 @@
+<h1>Listagem das Noticias</h1>
+<div id="main">
+  <table>
+    <tr>
+     <th><h4>Id</h4></th>
+     <th><h4>Titulo</h4></th>
+     <th><h4>Autor</h4></th>
+     <th><h4>Descrição</h4></th>
+     <th><h4>Status</h4></th>
+    </tr>
+      <tr *ngFor="let Noticia of new" > 
+  
+       <ng-container>
+  
+        <td>{{ Noticia.id }}</td>
+   
+        <td>{{ Noticia.titulo }}</td>
+            
+        <td>{{ Noticia.autor }}</td>
+          
+        <td>{{ Noticia.descricao }}</td>
+         
+        <td>{{ Noticia.status }}</td>
+       
+      </ng-container>
+    </tr>
+  </table>
+</div>

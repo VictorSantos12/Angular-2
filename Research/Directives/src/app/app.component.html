@@ -1,0 +1,21 @@
+<section>
+  <router-outlet></router-outlet>
+</section>
+
+<div *ngIf="exemplo == true">
+  The difference between hiding and removing doesn't matter for a simple paragraph.<br>
+  It does matter when the host element is attached to a resource intensive component. <br>
+  Such a component's behavior continues even when hidden. The component stays attached <br>
+  to its DOM element. It keeps listening to events. Angular keeps checking for changes <br>
+  that could affect data bindings. Whatever the component was doing, it keeps doing.
+</div>
+
+<div *ngIf="exemplo == false">
+</div>
+
+<button *ngIf="exemplo == true" (click)="first()">
+  Esconder
+</button>
+<button *ngIf="exemplo == false" (click)="second()">
+  Mostrar
+</button>

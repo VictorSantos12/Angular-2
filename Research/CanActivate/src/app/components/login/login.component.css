@@ -1,0 +1,56 @@
+.password{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main {
+    display: grid;
+    margin: 30px;
+    height: 90vh;
+    box-shadow: 1px 1px 20px 0px rgb(136, 136, 136);
+    grid-template-areas: 'left left' 'right right' ;
+    grid-template-rows: 40vh 60vh;
+}
+
+.left { grid-area: 'left';
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.block {
+  display: flex;
+  min-width: 80%;
+  border-radius: 20px;
+  flex-direction: column;
+  background-color: transparent;
+   
+}
+
+.right{ grid-area: 'right';
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+}
+
+.logo {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+h2, p {
+  color: rgb(156, 156, 156);
+}
