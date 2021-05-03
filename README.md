@@ -375,19 +375,23 @@ usuários através do froms, tendo cada um deles diferentes vantagens:
 
 <h2>Template-driven</h2>
 
->Fomulário criado e cofigurado no próprio HTML;
->Validações declaradas no template HTML;
->O FormGroup é deduzido de forma automática pelo próprio Angular;
->Os valores do form são submetidos com o ngSubmit, ou pelo event listener
->(submit) na tag form, a qual irá chamar um módulo de execução do form;
+<ul>
+   <li>Fomulário criado e cofigurado no próprio HTML;</li>
+   <li>Validações declaradas no template HTML;</li>
+   <li>O FormGroup é deduzido de forma automática pelo próprio Angular;</li>
+   <li>Os valores do form são submetidos com o ngSubmit, ou pelo event listener
+   (submit) na tag form, a qual irá chamar um módulo de execução do form;</li>
+</ul>
 
 
 <h2>Reactive</h2>
 
->O formulário é criado e cofigurado no componente.ts;
->As validações são criadas dentro do componete.ts;
->O Angular usa o FormGroup que é definido no componente.ts;
->Não usa o ngSumit de forma obrigatória, podendo este ser substituído por um click event em um button do tipo submit;
+<ul>
+   <li>O formulário é criado e cofigurado no componente.ts;</li>
+   <li>As validações são criadas dentro do componete.ts;</li>
+   <li>O Angular usa o FormGroup que é definido no componente.ts;</li>
+   <li>Não usa o ngSumit de forma obrigatória, podendo este ser substituído por um click event em um button do tipo submit;</li>
+</ul>
 
 
 Ambos capituram eventos nos inputs vindos da View, validam este input, criam um modelo de formulário e de dados, e então provêm um modo de
