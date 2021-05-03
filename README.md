@@ -31,11 +31,11 @@ aplications quanto em apps mobile</h5>
    <li>Utiliza uma estrutura de Componentes com uma forte presença da orientação a objetos;</li>
 </ul>
 
-
-<h2>Components</h2>
-
+<div align="center">
+  <h1>Components</h1>
+</div>
   
-<h3>Criar um novo Componente</h3>
+<h2>Criar um novo Componente</h2>
   
 >ng g c + nome
  
@@ -45,8 +45,7 @@ Os Components são a estrutura base de uma aplicação em Angular, cada componen
 >Uma classe typescript que define o comportamento do componente
 >Um CSS que define o style do componente
 >E de forma opcional um arquivo CSS que determina funções específicas
-  
-<h3>Estrutura básica de um component:</h3>
+ 2
                  
     import { Component } from '@angular/core'
                       
@@ -67,14 +66,14 @@ Os Components são a estrutura base de uma aplicação em Angular, cada componen
               }
        }
 
-<h3>@Component</h3>
+<h2>@Component</h2>
 
 >Decorators são funções utilizadas tanto por componentes e modules quanto por services. 
 >Eles definem seu tipo e disponibilizam a conexão com dados, estrutura e lógica, sendo algo
 >como a estrutura física do componente, identificando a classe imediatamente a baixo como um
 >componente
 
-<h3>Seletor</h3>
+<h2>Seletor</h2>
 
 >Um seletor define a hieranquia de uso das propriedades de um componente dentro de outro, o referenciando
 >com o uso de uma tag html que leva a marcação do selector. O componente que carrega o seletor de outro passa
@@ -90,7 +89,7 @@ Os Components são a estrutura base de uma aplicação em Angular, cada componen
 
 >StyleSheet do compnente
    
-<h3>Class</h3>
+<h2>Class</h2>
 
 Sendo a parte mais importante e complexa do component, a classe define todo e qualquer comportamento que um componente tem
 ou virá a ter
@@ -103,17 +102,17 @@ ou virá a ter
           }
        }
        
-<h3>Constructor()</h3>
+<h2>Constructor()</h2>
  
 >O constructor é responsável por tornar visível ao componente uma dependência ou serviço, tornando disponíveis suas 
 >funcionalidades
  
-<h4>ngOnInit()</h4>
+<h2>ngOnInit()</h2>
  
 >Tem a função de executar com prioridade seu conteúdo, já que o mesmo é o primeiro método a ser executado quando a classe que 
 >o contém é chamada
  
-<h3>Propriedades(Atributos)</h3>
+<h2>Propriedades (Atributos)</h2>
 
 Uma propriedade é uma variável a qual se pode atribuir um tipo, seja esse number, string, boolean ou array, além de um valor correspondente
 a esse tipo, sendo pissível modificar tal valor dentro de uma rotina. Um detalhe importante é que as propriedades de um componente devem
@@ -136,7 +135,7 @@ ser declaradas e tipadas imediatamente após a declaração da classe que o repr
 Como dito anteriormente, o valor de uma propriedade pode ser alterado dentro de uma estrutura lógica. Essa estrutura, normalmente definida
 como uma rotina, método ou função, executa determinado trecho de código quando chamada
    
-<h3>Métodos(Funções)</h3>
+<h2>Métodos(Funções)</h2>
 
 Há formas distintas de executar um método, este podendo ter sua chamada atribuída a um evento, ou mesmo ser declarada dentro de um outro
 método. Um exemplo claro desse conceito é o ngOnInit, primeiro método a ser executado na chamada de uma classe. Exemplos de chamadas de um
@@ -164,7 +163,7 @@ método:
       }
      }
      
-<h3>Tipagem de Métodos</h3>
+<h2>Tipagem de Métodos</h2>
 
 <div align="center">
    <h1>Guia do Desenvolvedor</h1>	
@@ -180,8 +179,8 @@ Ao se iniciar um projeto no Angular CLI, uma das solicitações iniciais é defi
 o Angular Routes. O Angular Routes, ou apenas routes, é um dos módulos disponibilizados pelo Angular para que seja possível 
 definir a navegação e entre outras características de uma aplicação
 
-<h3>Index.html</h3>
-
+    <!-- index.html -->
+    
     <!doctype html>
     <html lang="en">
     <head>
@@ -201,7 +200,7 @@ da aplicação, a tag base define que esta página, ou melhor, seu conteúdo ser
 a mesma não possui um conteúdo propriamente dito. Por padrão o Angular define que o app.componet será a primeira parte da aplicação
 a ser renderizada, isso se confirma qunado o seletor referente ao app.component é o conteúdo do index.html
 
-<h3>app.component.html</h3>
+<h2>app.component.html</h2>
 
 Senda o componente inicial do projeto, o app.component será o primeiro a ser renderizado. O mesmo é muito importante pois define
 o acesso as demais rotas da aplicação. Veja:
@@ -214,7 +213,7 @@ da aplicação. Mas antes disso, se o template do AppComponent for acessado, pod
 Essa tag define que esse componente irá receber a rota padrão('/') do aplicação, sendo carregada quando a página for acessada.
 Isso também define que as demais rotas serão acessadas a partir dela
 
-<h3>app-routing.modules.ts</h3>
+<h2>app-routing.modules.ts</h2>
 
     import { NgModule } from '@angular/core';
     import { RouterModule, Routes } from '@angular/router';
@@ -230,9 +229,9 @@ Isso também define que as demais rotas serão acessadas a partir dela
     export class AppRoutingModule { }
 
 Nessa estrutura estão os imports necessários para que as rotas do sistemas sejam desenvolvidas.
-Essas rotas serão criadas dentro da constante definida como routes, seguindo a ordem sintática abaixo:
+Essas rotas serão criadas dentro da constante definida como routes, seguindo a ordem sintática abaixo:<br>
 
- <h5>Crie os componentes referentes a cada rota</h5>
+Crie os componentes referentes a cada rota
 	   
     import { ExemploComponent } from './exemplo/exemplo.component'; 
 
@@ -245,7 +244,7 @@ Cada rota poderá ser acessada pela URL através do caminho definido, porém, o 
 Uma forma de criar uma navegação mais aceitável é criando um link ou botão. Para isso, cria-se um deles no template anterior
 ao que se deseja acessar. Veja:
 
-<h3>app.component.html</h3>
+   <!-- app.component.html -->
 
     <button 
      type="button" 
@@ -262,17 +261,17 @@ As diretivas são estruturas de interação que criam uma nova definição da
 View com base em ações do usuário, isso só é possível garças a dinamicidade
 do Angular. No Angular há dois tipos distintos de diretivas:
                
-<h4>Structural directives</h4>
+<h2>Structural directives</h2>
    
 >Alteram o layout adicionando, removendo ou realocando
 >elementos DOM;
 
- <h4>Attribute directives</h4>
+<h2>Attribute directives</h2>
   
 >Alteram a aparencia ou o estado de elementos já existentes, sendo mais difundiadas por serem 
 >bem comuns ao JavaScript e portanto ao TypeScript. Elas são:
   
-<h3>*ngIf</h3>
+<h2>*ngIf</h2>
   
 O *ngIf é a structural directive mais simple de se entender. Tendo como parâmetro um boolean ou qualquer
 valor, que possa ser alterado, normalmente associado a um parâmetro, pode tornar um trexo inteiro do DOM
@@ -293,7 +292,7 @@ visível ou invisível
 O valor de comparação é o mesmo, tendo esse um valor padrão. Quando o valor for um true, o primeiro trexo será visível,
 quado for false, este não será mais visível, dando assim lugar ao segundo trexo. Exemplo:
   
- exemplo.componet.html
+    <!-- app.component.html -->
   
     <div *ngIf="exemplo == true">Exemplo</div>
     <div *ngIf="exemplo == false">...</div>
@@ -301,7 +300,7 @@ quado for false, este não será mais visível, dando assim lugar ao segundo tre
     <button *ngIf="exemplo == true" (click)="first()">Esconder</button>
     <button *ngIf="exemplo == false" (click)="second()">Mostrar</button>
   
-exemplo.componet.ts
+   <!-- app.component.ts -->
     
     ...
     
@@ -321,12 +320,12 @@ No exemplo acima há dois botões, ambos possuem um leitor de eventos de (click)
 do Angular. Isso define que quando o botão for clicado um método será chamado, este contendo uma nova definição da
 propriedade "exemplo". Essa propriedade é usada como parâmetro tanto para os botões quanto para as divs acima deles.
  
-<h4>Tornando mais Elegante</h4>
+<h3>Tornando mais Elegante</h3>
  
 Uma forma mais elegante de uso mantém a mesma estrutura lógica, porém, recebe uma definição sintática mais simples, 
 e portanto mais "elegante".
  
-exemplo.componet.html
+    <!-- app.component.html -->
  
      //Primeiro
     <p *ngIf="exemplo">
@@ -340,7 +339,7 @@ exemplo.componet.html
      o ngIf é verdadeiro, logo ele seria visível.
     </p>
     
-exemplo.componet.ts
+   <!-- app.component.ts -->
     
     ...
     
@@ -374,7 +373,7 @@ várias outras formas de tratamento de dados.
 O Angular provê duas diferentes maneiras para tratar o input do
 usuários através do froms, tendo cada um deles diferentes vantagens:
 
-<h4>Template-driven</h4>
+<h2>Template-driven</h2>
 
 >Fomulário criado e cofigurado no próprio HTML;
 >Validações declaradas no template HTML;
@@ -383,7 +382,7 @@ usuários através do froms, tendo cada um deles diferentes vantagens:
 >(submit) na tag form, a qual irá chamar um módulo de execução do form;
 
 
-<h4>Reactive</h4>
+<h2>Reactive</h2>
 
 >O formulário é criado e cofigurado no componente.ts;
 >As validações são criadas dentro do componete.ts;
@@ -400,30 +399,30 @@ dadas a seguir torna o processo mais simples e mais detalhado em termos de confi
 	
 O uso do form reactive requer:
 	
-<h4>Importar o ReactiveFormsModule e FormsModule no app.module.ts do projeto</h4>
+Importar o ReactiveFormsModule e FormsModule no app.module.ts do projeto
 
     import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 
-<h4>Importar os módulos de uso padrão do @angular/forms no componente desejado<h4>
+Importar os módulos de uso padrão do @angular/forms no componente desejado
 
     import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 
-<h4>Angular/forms</h4>
+<h2>Angular/forms</h2>
 
 O angular/forms é um módulo que disponibiliza uma série de recursos utilizados na criação de formulários reativos, sendo eles responsáveis 
 por definir uma série de características do formulário. Eles são:
 
-<h4>FormBuilder</h4>
+<h2>FormBuilder</h2>
 
 O FormBuilder age como um facilitador no processo de criação de formulários mais complexos, sendo possível acessar a partir dele os demais
 módulos;
 
-<h4>FormGroup</h4>
+<h2>FormGroup</h2>
 
 O FormGroup é responsável por agrupar todos os campos de um formulário em um único objeto, por definição cria um grupo. Cada campo recebe
 um nome chave para identificá-lo no objeto. Esse objeto é o responsável por cofigurar os campos de forma a criar validações;
 
-<h4>Validators</h4>
+<h2>Validators</h2>
 	
 Função que trata de definir parâmetros para o preenchimento correto do formulário, possuindo seus próprios módulos como:
 
@@ -432,6 +431,8 @@ Função que trata de definir parâmetros para o preenchimento correto do formul
 
 <h4>Exemplo de Validações</h4>
 	
+      <!-- app.component.ts -->
+   
        exemploDeFormulario: FormGroup;
 
 	 ngOnInit(): void {
@@ -441,7 +442,7 @@ Função que trata de definir parâmetros para o preenchimento correto do formul
          })
        }
 
-<h4>Resposta no HTML</h4>
+       <!-- app.component.html -->
 
 	<input 
          class="form-control me-2" 
@@ -459,7 +460,7 @@ que ele só será visível caso o campo de status já tiver sido preenchido e fo
 
 >Retornando "Preencha o campo corretamente" caso o usuário apague o que foi digitado.
 
-<h4>FormControl</h4>
+<h2>FormControl</h2>
 
 Trata os dados de cada formulário de um grupo de forma individual, sendo definido em cada um deles de maneira isolada fora do grupo.
 Exemplo:
@@ -481,9 +482,9 @@ template
 	
 Esse exemplo cria validações fora do grupo, sendo necessário declarar um [formControl] em cada input para usá-lo dessa maneira
 
-<h3>Unindo Conceitos</h3>
+<h2>Unindo Conceitos</h2>
 
-exemplo.componet.ts
+         <!-- app.component.ts -->
    	
          import { Component, OnInit } from '@angular/core';
 
@@ -499,18 +500,18 @@ exemplo.componet.ts
          
          export class ExemploComponent implements OnInit {
 	
-	 2º Declaração da variável que irá receber o group e seu tipo(FormGroup)
+	 <!-- 2º Declaração da variável que irá receber o group e seu tipo(FormGroup) -->
 
 	 exemploDeFormulario: FormGroup
 
-	 3º Definição de relação de herança com o FormBuilder
+	 <!--  3º Definição de relação de herança com o FormBuilder -->
 
          constructor( builder: FormBuilder ) { }
 
          ngOnInit(): void {
-	  
-	 4º A variável pré definida recebe um grupo de inputs que é criado cada 
-         vez que a classe ExemploComponent é chamada
+	 
+	 <!--  4º A variável pré definida recebe um grupo de inputs que é criado cada 
+         vez que a classe ExemploComponent é chamada -->
 
           this.formularioExemplo = this.builder.group({
               nome: ['',Validators.compose([Validators.required]),
@@ -520,8 +521,9 @@ exemplo.componet.ts
 
          }
 	
-	5º O módulo onSubmit será chamado quando o fomulário for submetido, por isso é preciso definir
-	a chamada para esse módulo na tag <form>
+	<!--  5º O módulo onSubmit será chamado quando o fomulário for submetido, por isso é preciso definir
+	a chamada para esse módulo na tag <form> -->
+	
 
 	onSubmit() {
 	//O console retorna os dados do formulário
@@ -530,10 +532,8 @@ exemplo.componet.ts
  
        }
 	
-exemplo.componet.html
-	
-	6º O formulário recebe dois parâmetros, um que definine o método a ser chamado, o qual corresponde ao uso dos dados
-	no submit, e um que o define como um formGroup, este recebendo o identificador da variável criada na classe
+	<!-- 6º O formulário recebe dois parâmetros, um que definine o método a ser chamado, o qual corresponde ao uso dos dados
+	no submit, e um que o define como um formGroup, este recebendo o identificador da variável criada na classe -->
 	
 	<form
  	 (submit) = "onSubmit()"
@@ -574,7 +574,7 @@ exemplo.componet.html
 	 </div>
          <div class="button-area">
 
-	 7º Botão do tipo submit que define a chamada para submeter o formulário
+	 <!-- 7º Botão do tipo submit que define a chamada para submeter o formulário -->
 
            <button 
             type="submit" 
@@ -596,11 +596,10 @@ exemplo.componet.html
 
 <h2>Services</h2>
 
-Criar um novo Serviço
+Criar um novo Service
 
-   >ng g c s + nome
+>ng g c s + nome
 
-     
 Os services são utilizados como mecanismo de realocação ou reaproveitamento
 de dados que são compartilhados entre componentes por toda a aplicação. Os
 services são responsáveis por buscar, válidar ou fazer o log de dados na
@@ -609,7 +608,7 @@ Um dos propósitos básicos dos Services é criar a conexão com o Back-end.
 
     A definição de uma class de Service é imediatamente precedida do decorator @Injectable().
     
-<h3>HttpClient</h3>
+<h2>HttpClient</h2>
  
  
 <h2>Modules</h2>
@@ -619,7 +618,6 @@ tornar disponíveis funcionalidades que são providas em diferentes partes
 da apliação, além de prover suas póprias funcionalidades. Os NgModules             
 são extremamente importantes para que a reutilização do código seja possível;
   
- 
 
 <h2>Ferramentas</h2>
 
@@ -629,17 +627,17 @@ O Bootstrap é uma ferramenta de desenvolvimento criada pela google para disponi
 de interfaces web, os quais implicam diretamente na experiência do usuário. A ferramenta dá acesso a layouts e componentes pré estilizados
 como Navbars, buttons, cards e entre outros.
 
-<h4>Instalação</h4>
+Instalação
 
 >npm install bootstrap
 >yarn add bootstrap@4.6.0
 
-<h4>Declaração de Uso</h4>
+Declaração de Uso
 
 Há duas formas para defeinir o uso do bootstrap como uma dependência CSS, e por conseguinte,<br>
 definir acesso a suas funcionalidades e componentes:
 
-<h4>Angular.json</h4>
+Angular.json
 
 Na pasta Angular.json, no espaço definido como "styles", crie a rota para acesso ao módulo
 referente ao bootstrap:<br>
@@ -652,7 +650,7 @@ referente ao bootstrap:<br>
    >"node_modules/bootstrap/dist/css/bootstrap.min.css"<br>
    >]
 
-<h4>Importando No Style Sheet</h4>
+Importando No Style Sheet
 
 A definição da rota acima também pode ser feita na pasta principal de folha de estilo do projeto,
 definida na criação do mesmo, independente do tipo de CSS utilizado:<br>
