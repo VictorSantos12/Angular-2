@@ -15,18 +15,25 @@ aplications quanto em apps mobile</h5>
   
 <h4>Docunentação Oficial: https://angular.io/docs</h4>
 
->Intalação:  npm install -g @angular/cli
->Novo Projeto: ng new name
->Iniciar Servidor de Desenvolvimento: cd name => ng serve --open
+<ul>
+   <li>Intalação:  npm install -g @angular/cli</li>
+   <li>Novo Projeto: ng new name</li>
+   <li>Iniciar Servidor de Desenvolvimento: cd name => ng serve --open</li>
+</ul>
+
      	
 <h2>Caracteristicas Básicas</h2>
-     
->Utiliza Typescript
->Utiliza HTML e obedece a ordem hierárquica do DOM;
->Possui uma CLI própria para garantir uma boa interação com o desenvolvedor;
->Utiliza uma estrutura de Componentes com uma forte presença da orientação a objetos;
+
+<ul>
+   <li>Utiliza Typescript</li>
+   <li>Utiliza HTML e obedece a ordem hierárquica do DOM;</li>
+   <li>Possui uma CLI própria para garantir uma boa interação com o desenvolvedor;</li>
+   <li>Utiliza uma estrutura de Componentes com uma forte presença da orientação a objetos;</li>
+</ul>
+
 
 <h2>Components</h2>
+
   
 <h3>Criar um novo Componente</h3>
   
