@@ -504,18 +504,18 @@ Esse exemplo cria validações fora do grupo, sendo necessário declarar um [for
          
          export class ExemploComponent implements OnInit {
 	
-	 <!-- 2º Declaração da variável que irá receber o group e seu tipo(FormGroup) -->
+	 2º Declaração da variável que irá receber o group e seu tipo(FormGroup)
 
 	 exemploDeFormulario: FormGroup
 
-	 <!--  3º Definição de relação de herança com o FormBuilder -->
+	 3º Definição de relação de herança com o FormBuilder
 
          constructor( builder: FormBuilder ) { }
 
          ngOnInit(): void {
 	 
-	 <!--  4º A variável pré definida recebe um grupo de inputs que é criado cada 
-         vez que a classe ExemploComponent é chamada -->
+	 4º A variável pré definida recebe um grupo de inputs que é criado cada 
+         vez que a classe ExemploComponent é chamada
 
           this.formularioExemplo = this.builder.group({
               nome: ['',Validators.compose([Validators.required]),
@@ -525,8 +525,8 @@ Esse exemplo cria validações fora do grupo, sendo necessário declarar um [for
 
          }
 	
-	<!--  5º O módulo onSubmit será chamado quando o fomulário for submetido, por isso é preciso definir
-	a chamada para esse módulo na tag <form> -->
+	5º O módulo onSubmit será chamado quando o fomulário for submetido, por isso é preciso definir
+	a chamada para esse módulo na tag <form>
 	
 
 	onSubmit() {
@@ -536,8 +536,9 @@ Esse exemplo cria validações fora do grupo, sendo necessário declarar um [for
  
        }
 	
-	<!-- 6º O formulário recebe dois parâmetros, um que definine o método a ser chamado, o qual corresponde ao uso dos dados
-	no submit, e um que o define como um formGroup, este recebendo o identificador da variável criada na classe -->
+	6º O formulário recebe dois parâmetros, um que definine o método a ser chamado, o qual <br>
+	corresponde ao uso dos dados no submit, e um que o define como um formGroup, este recebendo <br>
+	o identificador da variável criada na classe
 	
 	<form
  	 (submit) = "onSubmit()"
@@ -578,7 +579,7 @@ Esse exemplo cria validações fora do grupo, sendo necessário declarar um [for
 	 </div>
          <div class="button-area">
 
-	 <!-- 7º Botão do tipo submit que define a chamada para submeter o formulário -->
+	 7º Botão do tipo submit que define a chamada para submeter o formulário
 
            <button 
             type="submit" 
