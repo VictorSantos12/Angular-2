@@ -35,7 +35,7 @@ A Angular CLI é essencial no processo de criação dos projetos e no gerenciame
 <h2>Criando uma Aplicação</h2>
 
 
-O desenvolvimento de aplicações Angular é feito no contexto de um workspace customizável, que por padão, já possui uma estrutura mínima para uso. Essa estrutura será utilizada no processo de entendimento dos conceitos essenciais do framework. O workspace serpa abordado de forma aprofundada no futuro. 
+O desenvolvimento de aplicações Angular é feito no contexto de um workspace customizável, que por padão, já possui uma estrutura mínima para uso. Essa estrutura será utilizada no processo de entendimento dos conceitos essenciais do framework. O workspace será abordado de forma aprofundada no futuro. 
 
 Para criar uma aplicação Angular do zero, torne a acessar o terminal de comando e faça o run do comando a seguir no diretório desejado:
 
@@ -43,7 +43,7 @@ Para criar uma aplicação Angular do zero, torne a acessar o terminal de comand
     ng new my-app
 
 
-O Angular-CLI irá solicitar algumas configuração básicas para seu projeto, como o uso de strict e do Angular routing, além de qual style sheet será utilizado. Porém, no momento, essas configurações não irão interferir no entendimento dos próximos assuntos, logo, podem ser escolhidas sem nenhuma especificidade. 
+A Angular-CLI irá solicitar algumas configurações básicas para seu projeto, como o uso de strict e do Angular routing, além de qual style sheet será utilizado. Porém, no momento, estas configurações não irão interferir no entendimento dos próximos assuntos, logo, podem ser escolhidas sem nenhuma especificidade. 
 
 Para executar a aplicação, acesse o diretório criado(my-app) e execute o comando a seguir:
 
@@ -51,7 +51,7 @@ Para executar a aplicação, acesse o diretório criado(my-app) e execute o coma
     ng serve --open
 
 
-Uma nova janela será aberta no seu navegador, nela a aplicação será lançada localmente. O resultado é uma estrutura básica de template, meramente explicativa. Ela será posteriormente substituída então fique a vontade para modificá-la como bem desejar.
+Uma nova janela será aberta no seu navegador, nela a aplicação será lançada localmente. O resultado é uma estrutura básica de template, meramente explicativa. Ela será posteriormente substituída, então fique a vontade para modificá-la como bem desejar.
 
 
 <h2>My-app</h2>
@@ -60,12 +60,12 @@ Uma nova janela será aberta no seu navegador, nela a aplicação será lançada
 Com uma aplicação em mãos, é importante se fazer ciente de como a mesma se divide, as funcionalidades e a razão da existência dos diretórios e arquivos que a compõem. A diante faremos um overview sobre cada um deles:
 
 
-<h3>e2e</h3>
+<h2>e2e</h2>
 
 
 O primeiro arquivo que a Angular CLI disponibiliza é o <b>e2e</b>, que define uma estrutura de testes unitários para a aplicação crida. Ele conta com uma pasta src e três arquivos principais <b>app.e2e-spec.ts</b>, <b>app.po.ts</b> e <b>tsconfig.e2e.json</b>, cada um possuindo uma funcionalidade na estrutura de testes. 
 
-Para executar o teste padão que a Angular CLI cria, use o comando a seguir:
+Para executar o teste padão que a Angular CLI cria, use o comando a seguir no diretório do projeto:
 
 
     ng e2e
@@ -107,18 +107,18 @@ O resultado deve ser aproximadamente o seguinte:
     [16:18:51] I/launcher - chrome #01 passed
 
 
-<h3>node_modules</h3>
+<h2>node_modules</h2>
 
 
-O <b><i>node_modules</i></b> é uma folder comum a aplicações que fazem uso do Javascript, ou como nesse caso, do Typescript. Ela conta com uma série de pacotes e bibliotécas com inúmeras funcionalidades que são gerenciados pelo NPM, manager sobre o qual falaremos mais a frente. 
+O <b><i>node_modules</i></b> é uma folder comum a aplicações que fazem uso do Javascript. Ela conta com uma série de pacotes e bibliotecas com inúmeras funcionalidades que são gerenciados pelo NPM, manager sobre o qual falaremos mais a frente. 
 
-Basicamente tudo o que será incluído como parte de um projeto posterirmente é obtido da node_modules folder.
+Basicamente tudo o que será incluído como parte de um projeto é obtido da node_modules folder.
 
 
 <h2>src</h2>
 
 
-A <b><i>src</i></b> é a main folder da aplicação. É nela que são estruturados todos os componets e modulos da aplicação, além da estrutura de routing, style sheet e é onde está o index.html do projeto. Ela se divide nas pastas e arquivos a seguir:
+A <b><i>src</i></b> é a main folder da aplicação. É nela que são estruturados todos os componets e módulos, além da estrutura de routing, style sheet e é onde está o index.html do projeto. Ela se divide nas pastas e arquivos a seguir:
 
 
 <h2>app</h2>
@@ -130,25 +130,25 @@ A app folder carrega consigo o que seria o main component ou o main module do pr
 <h3>app-routing.module.ts</h3>
 
 
-Este arquivo só estrá presente na sua versão caso você tenha definido a isntação do Angular routing ao criar o projeto. É nele que definimos as rotas e seus respectivos components.
+Este arquivo só estará presente na sua versão caso você tenha definido a instação do Angular routing ao criar o projeto. É nele que definimos as rotas e seus respectivos components.
 
 
 <h3>app.component.css</h3>
 
 
-É o arquivo onde definmos o style sheet de um módulo em específico. Com isso é possível ter uma estrutura desacoplada e components seaprados.
+É o arquivo aonde definimos o style sheet de um módulo em específico. Com isso é possível ter uma estrutura desacoplada e components separados.
 
 
 <h3>app.component.html</h3>
 
 
-Consiste no template único que cada component possui, e também mantem a lógica de estrutura desacoplada citada acima.
+Consiste no template único que cada component possui, e mantém a mesma lógica de estrutura desacoplada citada acima.
 
 
 <h3>app.component.spec.ts</h3>
 
 
-É o arquivo de teste unitário que cada components precisa ter para ser incluído na estrutura do Karma.conf.js.
+É o arquivo de teste unitário que cada component precisa ter para ser incluído na estrutura do Karma.conf.js.
 
 
 <h3>app.module.ts</h3>
@@ -166,7 +166,7 @@ Arquivos de gerenciamento dos modules que correspondem as partes do projeto. Tod
 <h3>environments</h3>
 
 
-A pasta de environments, ou ambientes, basicamente identifica em que ambiente a aplicação está em run, se em produção(environments.prod.ts) ou desenvolvimento(environments.ts). A única diferença entre esses arquivos é a atribuição que é dada a variável <b>production</b>, que é logicamente true em para produção e false para desenvolvimento.
+A pasta de environments, ou ambientes, basicamente identifica em que ambiente a aplicação está em run, se em produção(environments.prod.ts) ou desenvolvimento(environments.ts). A única diferença entre esses arquivos é a atribuição que é dada a variável <b>production</b>, que é logicamente true para produção e false para desenvolvimento.
 
 
 <h3>index.html</h3>
@@ -184,7 +184,7 @@ Arquivo principal da Solution, definido na angular.json file.
 <h3>polyfills.ts</h3>
 
 
-Arquivo que age como um tradutos, com o qual é possível utilizar recurstos do ES6, por exemplo, em navegores que só compilam o ES5, além de variás outras funcionalidades.
+Arquivo que age como um tradutor, com o qual é possível utilizar recursos do ES6, por exemplo, em navegores que só compilam o ES5, além de variás outras funcionalidades.
 
 
 <h3>styles.css</h3>
@@ -274,13 +274,13 @@ O <b>angular.json</b> configura o workspace padrão citado anteriormente. É bas
 <h3>karma.config.js</h3>
 
 
-O <b>karma.config.js</b> é uma biblioteca utilizada para criação de testes unitários desenvolvida pela própria equipe do Angular.
+O <b>karma.config.js</b> é uma biblioteca utilizada para a criação de testes unitários desenvolvida pela própria equipe do Angular. Ela trata todos os arquivos spec nos vários components.
 
 
 <h3>package-lock.json</h3>
 
 
-O <b>package-lock.json</b> descreve as dependências usadas no projeto, dando informações como a versão instalada, links de verificação da integridade dessas dependências e dentre outras coisas.
+O <b>package-lock.json</b> descreve as dependências usadas no projeto, dando informações como a versão instalada, links de verificação da integridade dessas dependências, dentre outras coisas.
 
 
 <h3>package.json</h3>
@@ -295,13 +295,6 @@ O <b>package.json</b> é um arquivo de configuração utilizado para estipular e
 Tanto o <b>tsconfig.app.json</b> quanto os arquivos subsequentes são arquivos que configuram o Typescript e diferentes escalas dentro do porjeto.
 
 
-<h3>tsconfig.json</h3>
-
-
-O <b>tsconfig.json</b> possui função semelhante ao tsconfig.app.json, porém, é mais generalista.
-
-
-
 <h2>Aplicações Angular: O Essencial</h2>
   
 
@@ -314,10 +307,10 @@ A seguir iremos entrar em contanto com as estruturas mais básicas da composiç�
 Components são os blocos que sustentam uma aplicação. Um component inclui uma class TypeScript com um <b><i>@Component()</i></b> decorator, um template HTML e um style sheet. O decorator <b><i>@Component()</i></b> define as seguintes especificações:
 
 
-    - Um template HTML que instrui o Angular a como rederizar o component
-    - Uma classe Typescript que define seu comportamento
-    - Um seletor CSS que define como o component será utilizado em um template
-    - Um CSS set opcional que  define a aparencia que será dada aos elementos do template HTML
+ - Um template HTML que instrui o Angular a como rederizar o component
+ - Uma classe Typescript que define seu comportamento
+ - Um seletor CSS que define como o component será utilizado em um template
+ - Um CSS set opcional que  define a aparencia que será dada aos elementos do template HTML
 
 
 A seguir temos um exemplo da estrutura mínima de um Angular component:
@@ -338,21 +331,29 @@ A seguir temos um exemplo da estrutura mínima de um Angular component:
     }
 
 
-<h3>Decorator</h3>
+<h2>Decorator</h2>
 
 
 Decorators são funções utilizadas por componentes, modules e por services. Eles definem seu tipo e a conexão com os dados, estrutura e lógica, sendo algo como a estrutura física do component, identificando a classe imediatamente a baixo como um componente.
 
 
-<h3>Seletor</h3>
+<h2>Seletor</h2>
 
 
-Um seletor define a hieranquia de uso das propriedades de um componente dentro de um template, o referenciando com o uso de uma tag HTML que leva sua marcação. O componente que carrega o seletor de outro passa a ser Parent do mesmo. para utilizar o component criado anteriomente use:
+Um seletor define a hierarquia de uso das propriedades de um componente dentro de um template, o referenciando com o uso de uma tag HTML que leva sua marcação. O componente que carrega o seletor de outro passa a ser parent do mesmo. para utilizar o component criado anteriormente use:
 
 
     Ex: <my-component></my-compinent>
     
-   
+
+Ao renderizar o component anteriormente criado, teriamos o seguinte resultado:
+
+
+    <my-component>
+        <h2>Hello World</h2>
+    </my-component>
+
+
 <h2>Class</h2>
 
 
@@ -364,82 +365,11 @@ O Angular possui uma forte presença da Orientação a Objetos em sua estrutura 
      }
 
 
-Ao renderizar o component anteriormente criado, teriamos o seguinte resultado:
-
-
-    <my-component>
-        <h2>Hello World</h2>
-    </my-component>
-
-
 O model de um Angular component oferece um forte encapsulamento e uma estrutura intuitiva. 
 
- 
-<h2>Propriedades (Atributos)</h2>
 
+<!-- <h2>Angular Routing</h2>
 
-<h5>Uma propriedade é uma variável a qual se pode atribuir um tipo, seja esse number, string, boolean ou array, além de um valor correspondente
-a esse tipo, sendo pissível modificar tal valor dentro de uma rotina. Um detalhe importante é que as propriedades de um componente devem
-ser declaradas e tipadas imediatamente após a declaração da classe que o representa, precedendo seu constructor.
-
-     export class MyComponent { 
-     
-     propriedadeBoolean: boolean = false;
-     propriedadeNumber: number;
-     propriedadeArray: Exemplo[] = [];
-     
-     contructor () {}
-   
-     ngOnInit () {
-   
-     }
-    }
-    
-    
-Como dito anteriormente, o valor de uma propriedade pode ser alterado dentro de uma estrutura lógica. Essa estrutura, normalmente definida
-como uma rotina, método ou função, executa determinado trecho de código quando chamada
-   
-<h2>Métodos(Funções)</h2>
-
-Há formas distintas de executar um método, este podendo ter sua chamada atribuída a um evento, ou mesmo ser declarada dentro de um outro
-método. Um exemplo claro desse conceito é o ngOnInit, primeiro método a ser executado na chamada de uma classe. Exemplos de chamadas de um
-método:
-    
-     <!--- Arquivo .HTML --->
-    
-      <button type="button" (click)="umaRotinaQualquer()">Chamar a rotina</button>
-    
-     //Arquivo .TS
-    
-      export class MinhasRotinas {
-    
-      umaRotinaQualquer() {
-    	
-        console.log("1º chamada executada");
-        this.umaOutraRotina();
-	
-      }
-    
-      umaOutraRotina() {
-      
-        console.log("2º chamada executada");
-	 
-      }
-     }
-
-<h4>Tipagem de Métodos</h4>
-
-
-
-
-
-<h1>Guia do Desenvolvedor</h1>
-
-Por ter uma estrutura bastante rígida e bem formulada, o Angular possui a característica de ser bastante forte em termos
-de conteúdo. Abaixo estão dispiníveis algumas das funcionalidades mais utilizadas no desenvolvimento de aplicação Web
-com Angular
-  
-<h2>Angular Routing</h2>
 
 Ao se iniciar um projeto no Angular CLI, uma das solicitações iniciais é definir se o projeto em questão irá utilizar 
 o Angular Routes. O Angular Routes, ou apenas routes, é um dos módulos disponibilizados pelo Angular para que seja possível 
@@ -447,7 +377,7 @@ definir a navegação e entre outras características de uma aplicação
 
     <!-- index.html -->
     
-    <!doctype html>
+  <!-- <!doctype html>
     <html lang="en">
     <head>
       <meta charset="utf-8">
@@ -459,9 +389,9 @@ definir a navegação e entre outras características de uma aplicação
     <body>
       <app-root></app-root>
     </body>
-    </html>
+    </html> -->
 
-A estrutura de roteamento pode ser observada mesmo no index.html do projeto. Sendo este o principal arquivo de renderização
+<!-- A estrutura de roteamento pode ser observada mesmo no index.html do projeto. Sendo este o principal arquivo de renderização
 da aplicação, a tag base define que esta página, ou melhor, seu conteúdo será a primeira coisa a ser renderizada no loading. Porém,
 a mesma não possui um conteúdo propriamente dito. Por padrão o Angular define que o app.componet será a primeira parte da aplicação
 a ser renderizada, isso se confirma qunado o seletor referente ao app.component é o conteúdo do index.html
@@ -477,9 +407,9 @@ da aplicação. Mas antes disso, se o template do AppComponent for acessado, pod
      <router-outlet></router-outlet>
 
 Essa tag define que esse componente irá receber a rota padrão('/') do aplicação, sendo carregada quando a página for acessada.
-Isso também define que as demais rotas serão acessadas a partir dela
+Isso também define que as demais rotas serão acessadas a partir dela -->
 
-<h2>app-routing.modules.ts</h2>
+<!-- <h2>app-routing.modules.ts</h2>
 
     import { NgModule } from '@angular/core';
     import { RouterModule, Routes } from '@angular/router';
@@ -508,20 +438,20 @@ além do componete que será renderizado nessa rota
 
 Cada rota poderá ser acessada pela URL através do caminho definido, porém, o usuário nunca irá navegar dessa forma.
 Uma forma de criar uma navegação mais aceitável é criando um link ou botão. Para isso, cria-se um deles no template anterior
-ao que se deseja acessar. Veja:
+ao que se deseja acessar. Veja: -->
 
    <!-- app.component.html -->
 
-    <button 
+  <!-- <button 
      type="button" 
      routerLink="exemplo">
      Exemplo
     </button>
 
-Ao receber o routerLink, quando o botão for clicado o usuário será direcionado para o caminho/componente definido.
+Ao receber o routerLink, quando o botão for clicado o usuário será direcionado para o caminho/componente definido. -->
 
 
-<h2>Directives</h2>
+<!-- <h2>Directives</h2>
 
 As diretivas são estruturas de interação que criam uma nova definição da
 View com base em ações do usuário, isso só é possível garças a dinamicidade
@@ -537,9 +467,9 @@ do Angular. No Angular há dois tipos distintos de diretivas:
 >Alteram a aparencia ou o estado de elementos já existentes, sendo mais difundiadas por serem 
 >bem comuns ao JavaScript e portanto ao TypeScript. Elas são:
   
-<h2>*ngIf</h2>
+<h2>*ngIf</h2> -->
   
-O *ngIf é a structural directive mais simple de se entender. Tendo como parâmetro um boolean ou qualquer
+<!-- O *ngIf é a structural directive mais simple de se entender. Tendo como parâmetro um boolean ou qualquer
 valor, que possa ser alterado, normalmente associado a um parâmetro, pode tornar um trexo inteiro do DOM
 visível ou invisível
      
@@ -556,19 +486,19 @@ visível ou invisível
     </p>
   
 O valor de comparação é o mesmo, tendo esse um valor padrão. Quando o valor for um true, o primeiro trexo será visível,
-quado for false, este não será mais visível, dando assim lugar ao segundo trexo. Exemplo:
+quado for false, este não será mais visível, dando assim lugar ao segundo trexo. Exemplo: -->
   
-    <!-- app.component.html -->
+  <!-- app.component.html -->
   
-    <div *ngIf="exemplo == true">Exemplo</div>
+ <!-- <div *ngIf="exemplo == true">Exemplo</div>
     <div *ngIf="exemplo == false">...</div>
     
     <button *ngIf="exemplo == true" (click)="first()">Esconder</button>
     <button *ngIf="exemplo == false" (click)="second()">Mostrar</button>
-  
+   -->
    <!-- app.component.ts -->
     
-    ...
+   <!-- ...
     
     exemplo: boolean = true;
     
@@ -579,21 +509,21 @@ quado for false, este não será mais visível, dando assim lugar ao segundo tre
     }
     second() {
        this.exemplo = true   
-    }
+    } -->
     
     
-No exemplo acima há dois botões, ambos possuem um leitor de eventos de (click), sendo este propriedade
+<!-- No exemplo acima há dois botões, ambos possuem um leitor de eventos de (click), sendo este propriedade
 do Angular. Isso define que quando o botão for clicado um método será chamado, este contendo uma nova definição da
 propriedade "exemplo". Essa propriedade é usada como parâmetro tanto para os botões quanto para as divs acima deles.
  
 <h3>Tornando mais Elegante</h3>
  
 Uma forma mais elegante de uso mantém a mesma estrutura lógica, porém, recebe uma definição sintática mais simples, 
-e portanto mais "elegante".
+e portanto mais "elegante". -->
  
-    <!-- app.component.html -->
+ <!-- app.component.html -->
  
-     //Primeiro
+  <!-- //Primeiro
     <p *ngIf="exemplo">
      A expressão recebe um true, portanto,
      o ngIf é verdadeiro, logo ele seria visível.
@@ -604,10 +534,10 @@ e portanto mais "elegante".
      A expressão recebe um true, portanto,
      o ngIf é verdadeiro, logo ele seria visível.
     </p>
+     -->
+ <!-- app.component.ts -->
     
-   <!-- app.component.ts -->
-    
-    ...
+  <!-- ...
     
     exemplo: boolean = true;
     
@@ -619,8 +549,8 @@ e portanto mais "elegante".
     second() {
        this.exemplo = true   
     }
-    
-Sendo exemplo o parâmetro de comparação, definir um *ngIf com "!exmplo" como argumento, se assemelha 
+     -->
+<!-- Sendo exemplo o parâmetro de comparação, definir um *ngIf com "!exmplo" como argumento, se assemelha 
 a definir que esse trexo só irá ser visível caso o valor correspondente a exmplo seja falso. O mesmo 
 pode ser dito caso seja true
     
@@ -663,9 +593,9 @@ usuários através do froms, tendo cada um deles diferentes vantagens:
 Ambos capituram eventos nos inputs vindos da View, validam este input, criam um modelo de formulário e de dados, e então provêm um modo de
 tartamento de mudanças. Entretanto, formulários que utilizam o template-driven tornam o processo de desenvolvimento um tanto lento. Outro ponto
 é que, no final das contas, ambos irão agir como um formulário reativo, logo, o resultado final é o mesmo. Porém, desenvolver seguindo as regras
-dadas a seguir torna o processo mais simples e mais detalhado em termos de configuração.
+dadas a seguir torna o processo mais simples e mais detalhado em termos de configuração. -->
 
-<h2>Reactive</h2>
+<!-- <h2>Reactive</h2>
 	
 O uso do form reactive requer:
 	
@@ -690,9 +620,9 @@ módulos;
 <h2>FormGroup</h2>
 
 O FormGroup é responsável por agrupar todos os campos de um formulário em um único objeto, por definição cria um grupo. Cada campo recebe
-um nome chave para identificá-lo no objeto. Esse objeto é o responsável por cofigurar os campos de forma a criar validações;
+um nome chave para identificá-lo no objeto. Esse objeto é o responsável por cofigurar os campos de forma a criar validações; -->
 
-<h2>Validators</h2>
+<!-- <h2>Validators</h2>
 	
 Função que trata de definir parâmetros para o preenchimento correto do formulário, possuindo seus próprios módulos como:
 
@@ -701,20 +631,20 @@ Função que trata de definir parâmetros para o preenchimento correto do formul
 
 <h4>Exemplo de Validações</h4>
 	
-      <!-- app.component.ts -->
+<!-- app.component.ts -->
    
-       exemploDeFormulario: FormGroup;
+  <!-- exemploDeFormulario: FormGroup;
 
 	 ngOnInit(): void {
 
             this.formularioNoticia = this.formBuilder.group({
             status: ['', Validators.compose([Validators.required, Validators.maxLength(1)])],
          })
-       }
+       } -->
 
-       <!-- app.component.html -->
+<!-- app.component.html -->
 
-	<input 
+<!-- <input 
          class="form-control me-2" 
          type="text"
          formControlName ="status">
@@ -722,15 +652,15 @@ Função que trata de definir parâmetros para o preenchimento correto do formul
 	.hasError('required')"
           style="color: red;">
           Preencha o campo corretamente
-	 </span>
+	 </span> -->
 
-Nesse exemplo são definidas auterações no DOM a partir de validações declaradas no grupo de formulários. Elas definem
+<!-- Nesse exemplo são definidas auterações no DOM a partir de validações declaradas no grupo de formulários. Elas definem
 o status de required(campo preenchido) e um número máximo de letras. No HTML, um span recebe uma condicional, que diz
-que ele só será visível caso o campo de status já tiver sido preenchido e for apagado.
+que ele só será visível caso o campo de status já tiver sido preenchido e for apagado. -->
 
->Retornando "Preencha o campo corretamente" caso o usuário apague o que foi digitado.
+<!-- >Retornando "Preencha o campo corretamente" caso o usuário apague o que foi digitado. --> 
 
-<h2>FormControl</h2>
+<!-- <h2>FormControl</h2>
 
 Trata os dados de cada formulário de um grupo de forma individual, sendo definido em cada um deles de maneira isolada fora do grupo.
 Exemplo:
@@ -752,9 +682,9 @@ template
 	
 Esse exemplo cria validações fora do grupo, sendo necessário declarar um [formControl] em cada input para usá-lo dessa maneira
 
-<h2>Unindo Conceitos</h2>
+<h2>Unindo Conceitos</h2> -->
 
-         <!-- app.component.ts -->
+  <!-- app.component.ts
    	
          import { Component, OnInit } from '@angular/core';
 
@@ -789,9 +719,9 @@ Esse exemplo cria validações fora do grupo, sendo necessário declarar um [for
               senha: ['',Validators.compose([Validators.required, Validators.maxLength(6)]),
             })	  
 
-         }
+         } -->
 	
-	5º O módulo onSubmit será chamado quando o fomulário for submetido, por isso é preciso definir
+<!-- 5º O módulo onSubmit será chamado quando o fomulário for submetido, por isso é preciso definir
 	a chamada para esse módulo na tag <form>
 	
 
@@ -804,47 +734,48 @@ Esse exemplo cria validações fora do grupo, sendo necessário declarar um [for
 	
 	6º O formulário recebe dois parâmetros, um que definine o método a ser chamado, o qual <br>
 	corresponde ao uso dos dados no submit, e um que o define como um formGroup, este recebendo <br>
-	o identificador da variável criada na classe
+	o identificador da variável criada na classe -->
 	
-	<form
- 	 (submit) = "onSubmit()"
-         [formGroup] = 'exemploDeFormulario'
-         >
-	 <div class="group">
-	  <input
-	   type="text"
-	   formControlName="nome">
-	   <span *ngIf ="formularioNoticia.controls['nome'].dirty && formularioNoticia.controls['mome']
-	     .hasError('required')" 
-	     style="color: red">
-               Preencha o campo corretamente
-             </span>
-	  </div>
-         <div class="group">
-	  <input
-	   type="email"
-	   formControlName="email">
-           <span *ngIf ="formularioNoticia.controls['email'].dirty && formularioNoticia.controls['email']
-	     .hasError('required')"
-	     style="color: red;">
+<!-- form
+ (submit) = "onSubmit()"
+       [formGroup] = 'exemploDeFormulario'
+       >
+	<div class="group">
+	 <input
+	  type="text"
+	  formControlName="nome">
+	  <span *ngIf ="formularioNoticia.controls['nome'].dirty && formularioNoticia.controls['mome']
+	    .hasError('required')" 
+	    style="color: red">
              Preencha o campo corretamente
            </span>
 	 </div>
-         <div class="group">
-	  <input
-	   type="password"
-	   formControlName="senha">
-	  <span *ngIf ="formularioNoticia.controls['senha'].dirty && formularioNoticia.controls['senha']
+       <div class="group">
+	 <input
+	  type="email"
+	  formControlName="email">
+         <span *ngIf ="formularioNoticia.controls['email'].dirty && formularioNoticia.controls['email']
 	    .hasError('required')"
-            style="color: red;">
-            Preencha o campo corretamente
-          </span>
-          <span *ngIf="formularioNoticia.controls['senha'].hasError('maxlength')"  style="color: red;">
-            Número máximo de campos preenchido
-          </span>
-	 </div>
-         <div class="button-area">
+	    style="color: red;">
+           Preencha o campo corretamente
+         </span>
+	</div>
+       <div class="group">
+	 <input
+	  type="password"
+	  formControlName="senha">
+	 <span *ngIf ="formularioNoticia.controls['senha'].dirty && formularioNoticia.controls['senha']
+	   .hasError('required')"
+          style="color: red;">
+          Preencha o campo corretamente
+        </span>
+        <span *ngIf="formularioNoticia.controls['senha'].hasError('maxlength')"  style="color: red;">
+          Número máximo de campos preenchido
+        </span>
+	</div>
+       <div class="button-area"> -->
 
+<!-- 
 	 7º Botão do tipo submit que define a chamada para submeter o formulário
 
            <button 
@@ -864,7 +795,8 @@ Esse exemplo cria validações fora do grupo, sendo necessário declarar um [for
            </button>
           </div>
 	</form>
-
+   -->
+<!-- 
 <h2>Services</h2>
 
 Criar um novo Service
@@ -887,10 +819,10 @@ Um dos propósitos básicos dos Services é criar a conexão com o Back-end.
 Os modules, ou mais especificamente NgModules, têm a responsábilidade de
 tornar disponíveis funcionalidades que são providas em diferentes partes             
 da apliação, além de prover suas póprias funcionalidades. Os NgModules             
-são extremamente importantes para que a reutilização do código seja possível;
+são extremamente importantes para que a reutilização do código seja possível; -->
   
 
-<h2>Ferramentas</h2>
+<!-- <h2>Ferramentas</h2>
 
 ![bootstrap_plain_wordmark_logo_icon_146620](https://user-images.githubusercontent.com/61476935/107878686-21c9b280-6eb3-11eb-878c-8c4381915caa.png)
 
@@ -932,4 +864,4 @@ definida na criação do mesmo, independente do tipo de CSS utilizado:<br>
 A partir dessas declarações, é possível utilizar os componentes que o bootstrap disponibiliza
 em sua documentação em sua aplicação.
 
->Documentação: https://getbootstrap.com/docs/5.0/getting-started/introduction/
+>Documentação: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
