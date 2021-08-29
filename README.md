@@ -18,11 +18,9 @@ A popularidade da ferramenta vem crescendo cada vez mais nos últimos anos, esta
 Assim como qualquer plataforma de desenvolvimento, o Angular possui uma estrutura com características próprias e funcionalidades específicas. Estas incluem: 
 
 
-    - Uma estrutura de desenvolvimento baseada em components
-    - Uma collection de bibliotecas que cobrem uma variedade de features, incluindo roteamento,
-      gerenciamento de fomulários, comunicação client-server e muito mais
-    - Um conjunto de ferramentas de desenvolvimento para ajudar a desenvolver, construir, testar
-      e atualizar seu código. Sendo uma delas uma CLI própria
+* Uma estrutura de desenvolvimento baseada em components
+* Uma collection de bibliotecas que cobrem uma variedade de features, incluindo roteamento, gerenciamento de fomulários, comunicação client-server e muito mais
+* Um conjunto de ferramentas de desenvolvimento para ajudar a desenvolver, construir, testar e atualizar seu código. Sendo uma delas uma CLI própria
 
 
 <h2>Angular CLI (Instalação)</h2>
