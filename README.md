@@ -73,10 +73,11 @@ Para executar o teste padão que a Angular CLI cria, use o comando a seguir:
 
 O resultado deve ser aproximadamente o seguinte:
 
-    [16:18:23] I/file_manager - creating folder     C:\Ads\Materias\Front-end\Angular-2\Development\my-app\node_modules\protractor\node_modules\    webdriver-manager\selenium
-    [16:18:23] I/config_source - curl     -oC:\Ads\Materias\Front-end\Angular-2\Development\my-app\node_modules\protractor\node_module    s\webdriver-manager\selenium\chrome-response.xml https://chromedriver.storage.googleapis.    com/
-    [16:18:24] I/downloader - curl     -oC:\Ads\Materias\Front-end\Angular-2\Development\my-app\node_modules\protractor\node_module    s\webdriver-manager\selenium/chromedriver_92.0.4515.107.zip https://chromedriver.storage.    googleapis.com/92.0.4515.43/chromedriver_win32.zip
-    [16:18:27] I/update - chromedriver: unzipping chromedriver_92.0.4515.107.zip
+
+    [16:18:23] I/file_manager - creating folder     
+
+    ...
+
     ✔ Browser application bundle generation complete.
     
     Initial Chunk Files | Names         |      Size  
@@ -90,15 +91,12 @@ O resultado deve ser aproximadamente o seguinte:
     
     Build at: 2021-08-29T19:18:41.513Z - Hash: 7253eb4f2b7088370a2b - Time: 8046ms
     
-    ** Angular Live Development Server is listening on localhost:4200, open your browser on     http://localhost:4200/ **
+    ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
     
     
     √ Compiled successfully.
-    [16:18:42] I/launcher - Running 1 instances of WebDriver
-    DevTools listening on ws://127.0.0.1:58077/devtools/browser/    da009a43-1195-44a1-b35f-e73b2a693f88
-    [10524:10948:0829/161847.423:ERROR:device_event_log_impl.cc(214)] [16:18:47.423] USB:     usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: Um     dispositivo conectado ao sistema nÒo estß funcionando.     (0x1F)                                                                                                                      8 Failed to read descriptor from n
-    Jasmine started
-    [16:18:51] W/element - more than one element found for locator By(css selector, app-root .    content span) - the first result will be     used                                                                                                 t result will be used
+ 
+    ...
     
       workspace-project App
         √ should display welcome message
@@ -106,7 +104,7 @@ O resultado deve ser aproximadamente o seguinte:
     Executed 1 of 1 spec SUCCESS in 0.828 sec.
     [16:18:51] I/launcher - 0 instance(s) of WebDriver still running
     [16:18:51] I/launcher - chrome #01 passed
-    
+
 
 <h3>node_modules</h3>
 
