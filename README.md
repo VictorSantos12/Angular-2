@@ -4,107 +4,125 @@
 <br>
 <img src="https://img.shields.io/static/v1?label=Angular&message=Framework&color=red&style=for-the-badge&logo=Angular"/>
 
-  <h5>O Angular é um framework Typescript para desenvolvimento no client-side.
-  Com uma estrutura que permite uma grande diversidade de usos, é bastante comum
-  encontrar o Angular, em alguma de suas versões, presente tanto em single page
-  aplications quanto em apps mobile</h5> 
-  
-  ><h4>Para mais informações sobre o TypeScript recomendo: https://github.com/VictorSantos12/Typescript</h4>
-  
-  <h4>Docunentação Oficial: https://angular.io/docs</h4>
 
-   ><h5>Intalação:  npm install -g @angular/cli</h5>
-   ><h5>Novo Projeto: ng new name</h5>
-   ><h5>Iniciar Servidor de Desenvolvimento: cd name => ng serve --open</h5>
+O Angular é um framework Typescript utilizado para desenvolver aplicações no client-side, desenvolvido e mantido pela equipe da Google. Com uma estrutura que permite uma grande diversidade de usos, é bastante comum encontrar o Angular,em alguma de suas versões, presente em diversos tipos de aplicações, sendo mais comum encontrá-lo em SPA Applications.
+  
      	
-  <h4>Caracteristicas Básicas</h4>
+<h3>Caracteristicas Básicas</h3>
      
-   ><h5>Utiliza Typescript;<h5>
-   ><h5>Utiliza HTML e obedece a ordem hierárquica do DOM;</h5>
-   ><h5>Possui uma CLI própria para garantir uma boa interação com o desenvolvedor;
-   ><h5>Utiliza uma estrutura de Componentes com uma forte presença da orientação a objetos;</h5>
 
-  <h2>Components</h2>
+Assim como qualquer plataforma de desenvolvimento, o Angular possui uma estrutura com características próprias e funcionalidades específicas. Estas incluem: 
+
+
+    - Uma estrutura de desenvolvimento baseada em components
+    - Uma collection de bibliotecas que cobrem uma variedade de features, incluindo roteamento, gerenciamento de fomulários, comunicação client-server e muito mais
+    - Um conjunto de ferramentas de desenvolvimento para ajudar a desenvolver, construir, testar e atualizar seu código. Sendo uma delas uma CLI própria
+
+
+<h3>Angular CLI (Instalação)</h3>
+
+
+A Angular CLI é essencial no processo de criação dos projetos e no gerenciamento das development tasks, como teste, bundling e deployment. Para instalar e fazer uso de seus recursos, e para que seja possível acompanhar o processo de aprendizado, use o comando a seguir:
+
+
+    npm install -g @angular/cli
+
+
+<h3>Criando um Aplicação</h3>
+
+
+O desenvolvimento de aplicações Angular é feito no contexto de um workspace customizável, que por padão, já possui uma estrutura mínima para uso. Essa estrutura será utilizada no processo de entendimento dos conceitos essenciais do framework. Mas abordaremos o workspace de forma aprofundada no futuro. 
+
+Para criar uma aplicação Angular do zero, acesse o terminal de comando e faça o run do comando a seguir no diretório desejado:
+
+
+    ng new my-app
+
+
+O Angular-CLI irá solicitar algumas configuração básicas para seu projeto, como o uso de strict e do Angular routing, além de qual style sheet será utilizado. Porém, no momento, essas confirurações não irão interferir no entendimento dos próximos assuntos, logo, podem ser escolhidas sem nenhuma especificidade. O resultado é uma app básico que conta com algumas informações e que será base para os furutos exemplos.
+
+
+<h3>My-app</h3>
+
+
+
+
+
+<h3>Aplicações Angular: O Essencial</h3>
   
-  <h5>Criar um novo Componente</h5>
+
+A seguir iremos entrar em contanto com as estruturas mais básicas da composição de uma aplicação desenvolvida com o Angular. É essencial entender essa estrutura antes de abordarmos aspectos diretamente ligados ao desenvolvimento.
+
+
+<h3>Components</h3>
   
-   ><h5>ng g c + nome</h5>
+
+Components são os blocos que sustentam uma aplicação. Um component inclui uma class TypeScript com um <b><i>@Component()</i></b> decorator, um template HTML e um style sheet. O decorator <b><i>@Component()</i></b> define as seguintes especificações:
+
+
+    - Um template HTML que instrui o Angular a como rederizar o component
+    - Uma classe Typescript que define seu comportamento
+    - Um seletor CSS que define como o component será utilizado em um template
+    - Um CSS set opcional que  define a aparencia que será dada aos elementos do template HTML
+
+
+A seguir temos um exemplo da estrutura mínima de um Angular component:
  
- <h5>Os Components são a estrutura base de uma aplicação em Angular, cada componente consiste em:</h5>
-  
-   ><h5>Um template HTML que define a marcação do que será renderizado no componente</h5>
-   ><h5>Uma classe typescript que define o comportamento do componente</h5>
-   ><h5>Um CSS que define o style do componente</h5>
-   ><h5>E de forma opcional um arquivo CSS que determina funções específicas</h5>
-  
- <h4>Estrutura básica de um component:</h4>
                  
     import { Component } from '@angular/core'
                       
-       @Component({
-       
-       Selector: 'my-component',
-       templateUrl: './my-coponent.component.html',
-	   styleUrls: ['./my-component.component.css']
-	   
-                 })
-       export class MyComponent {
-       
-	   constructor() {}
+    @Component({
+    
+     Selector: 'my-component',
+     templateUrl: '<h2>Hello World</h2>',
 	
- 	   onInit() {  
-          
-          
-              }
-       }
+    })
 
-<h3>@Component</h3>
+    export class MyComponent {
+       
+	    
+    }
 
-   ><h5>Decorators são funções utilizadas tanto por componentes e modules quanto por services. 
-   >Eles definem seu tipo e disponibilizam a conexão com dados, estrutura e lógica, sendo algo
-   >como a estrutura física do componente, identificando a classe imediatamente a baixo como um
-   >componente</h5>
+
+<h3>Decorator</h3>
+
+
+Decorators são funções utilizadas por componentes, modules e por services. Eles definem seu tipo e a conexão com os dados, estrutura e lógica, sendo algo como a estrutura física do component, identificando a classe imediatamente a baixo como um componente.
+
 
 <h3>Seletor</h3>
 
-   ><h5>Um seletor define a hieranquia de uso das propriedades de um componente dentro de outro, o referenciando
-   >com o uso de uma tag html que leva a marcação do selector. O componente que carrega o seletor de outro passa
-   >a ser "pai" do mesmo</h5>
+
+Um seletor define a hieranquia de uso das propriedades de um componente dentro de um template, o referenciando com o uso de uma tag HTML que leva sua marcação. O componente que carrega o seletor de outro passa a ser Parent do mesmo. para utilizar o component criado anteriomente use:
+
 
     Ex: <my-component></my-compinent>
-
-<h3>TemplateUrl</h3>
-
-   ><h5>Estrutura de marcação (HTML) do componente</h5>
-   
-<h3>StyleUrls</h3>
-
-   ><h5>StyleSheet do compnente</h5>
+    
    
 <h3>Class</h3>
 
- <h5>Sendo a parte mais importante e complexa do component, a classe define todo e qualquer comportamento que um componente tem
- ou virá a ter</h5>
+
+O Angular possui uma forte presença da Orientação a Objetos em sua estrutura base, sendo assim, uma das partes mais importantes de um component é a sua classe. Esta define todo e qualquer comportamento que ele virá a ter:
+
 	
     export class MyComponent {
-      constructor() {}
-      
-      ngOnInit() {  
-          
-          }
-       }
-       
- <h4>Constructor()</h4>
- 
- ><h5>O constructor é responsável por tornar visível ao componente uma dependência ou serviço, tornando disponíveis suas 
- >funcionalidades</h5>
- 
- <h4>ngOnInit()</h4>
- 
- ><h5>Tem a função de executar com prioridade seu conteúdo, já que o mesmo é o primeiro método a ser executado quando a classe que 
- >o contém é chamada</h5>
+
+     }
+
+
+Ao renderizar o component anteriormente criado, teriamos o seguinte resultado:
+
+
+    <my-component>
+        <h2>Hello World</h2>
+    </my-component>
+
+
+O model de um Angular component oferece um forte encapsulamento e uma estrutura intuitiva. 
+
  
 <h4>Propriedades(Atributos)</h4>
+
 
 <h5>Uma propriedade é uma variável a qual se pode atribuir um tipo, seja esse number, string, boolean ou array, além de um valor correspondente
 a esse tipo, sendo pissível modificar tal valor dentro de uma rotina. Um detalhe importante é que as propriedades de um componente devem
@@ -154,8 +172,12 @@ método:</h5>
 	 
       }
      }
-     
+
 <h4>Tipagem de Métodos</h4>
+
+
+
+
 
 <h1>Guia do Desenvolvedor</h1>
 
