@@ -20,13 +20,13 @@ Assim como qualquer plataforma de desenvolvimento, o Angular possui uma estrutur
 
 * Uma estrutura de desenvolvimento baseada em components
 * Uma collection de bibliotecas que cobrem uma variedade de features, incluindo roteamento, gerenciamento de fomulários, comunicação client-server e muito mais
-* Um conjunto de ferramentas de desenvolvimento para ajudar a desenvolver, construir, testar e atualizar seu código. Sendo uma delas uma CLI própria
+* Um conjunto de ferramentas de desenvolvimento para ajudar a construir, testar e atualizar seu código. Sendo uma delas a Angular CLI
 
 
 <h2>Angular CLI (Instalação)</h2>
 
 
-A Angular CLI é essencial no processo de criação dos projetos e no gerenciamento das development tasks, como teste, bundling e deployment. Para instalar e fazer uso de seus recursos, e para que seja possível acompanhar o processo de aprendizado, use o comando a seguir:
+A Angular CLI é essencial no processo de criação dos projetos e no gerenciamento das development tasks, como teste, bundling e deployment. Para instalar e fazer uso de seus recursos, e para que seja possível acompanhar o processo de aprendizado, acesse um terminal de comando na sua máquina e use o comando a seguir:
 
 
     npm install -g @angular/cli
@@ -35,21 +35,82 @@ A Angular CLI é essencial no processo de criação dos projetos e no gerenciame
 <h2>Criando uma Aplicação</h2>
 
 
-O desenvolvimento de aplicações Angular é feito no contexto de um workspace customizável, que por padão, já possui uma estrutura mínima para uso. Essa estrutura será utilizada no processo de entendimento dos conceitos essenciais do framework. Mas abordaremos o workspace de forma aprofundada no futuro. 
+O desenvolvimento de aplicações Angular é feito no contexto de um workspace customizável, que por padão, já possui uma estrutura mínima para uso. Essa estrutura será utilizada no processo de entendimento dos conceitos essenciais do framework. O workspace serpa abordado de forma aprofundada no futuro. 
 
-Para criar uma aplicação Angular do zero, acesse o terminal de comando e faça o run do comando a seguir no diretório desejado:
+Para criar uma aplicação Angular do zero, torne a acessar o terminal de comando e faça o run do comando a seguir no diretório desejado:
 
 
     ng new my-app
 
 
-O Angular-CLI irá solicitar algumas configuração básicas para seu projeto, como o uso de strict e do Angular routing, além de qual style sheet será utilizado. Porém, no momento, essas confirurações não irão interferir no entendimento dos próximos assuntos, logo, podem ser escolhidas sem nenhuma especificidade. O resultado é uma app básico que conta com algumas informações e que será base para os furutos exemplos.
+O Angular-CLI irá solicitar algumas configuração básicas para seu projeto, como o uso de strict e do Angular routing, além de qual style sheet será utilizado. Porém, no momento, essas configurações não irão interferir no entendimento dos próximos assuntos, logo, podem ser escolhidas sem nenhuma especificidade. 
+
+Para executar a aplicação, acesse o diretório criado(my-app) e execute o comando a seguir:
+
+    
+    ng serve --open
+
+
+Uma nova janela será aberta no seu navegador, nela a aplicação será lançada localmente. O resultado é uma estrutura básica de template, meramente explicativa. Ela será posteriormente substituída então fique a vontade para modificá-la como bem desejar.
 
 
 <h2>My-app</h2>
 
 
+Com uma aplicação em mãos, é importante se fazer ciente de como a mesma se divide, as funcionalidades e a razão da existência dos diretórios e arquivos que a compõem. A diante faremos um overview sobre cada um deles:
 
+
+<h3>e2e</h3>
+
+
+O primeiro arquivo que a Angular CLI disponibiliza é o <b>e2e</b>, que define uma estrutura de testes unitários para a aplicação crida. Ele conta com uma pasta src e três arquivos principais <b>app.e2e-spec.ts</b>, <b>app.po.ts</b> e <b>tsconfig.e2e.json</b>, cada um possuindo uma funcionalidade na estrutura de testes. 
+
+Para executar o teste padão que a Angular CLI cria, use o comando a seguir:
+
+
+    ng e2e
+
+
+O resultado deve ser aproximadamente o seguinte:
+
+    [16:18:23] I/file_manager - creating folder     C:\Ads\Materias\Front-end\Angular-2\Development\my-app\node_modules\protractor\node_modules\    webdriver-manager\selenium
+    [16:18:23] I/config_source - curl     -oC:\Ads\Materias\Front-end\Angular-2\Development\my-app\node_modules\protractor\node_module    s\webdriver-manager\selenium\chrome-response.xml https://chromedriver.storage.googleapis.    com/
+    [16:18:24] I/downloader - curl     -oC:\Ads\Materias\Front-end\Angular-2\Development\my-app\node_modules\protractor\node_module    s\webdriver-manager\selenium/chromedriver_92.0.4515.107.zip https://chromedriver.storage.    googleapis.com/92.0.4515.43/chromedriver_win32.zip
+    [16:18:27] I/update - chromedriver: unzipping chromedriver_92.0.4515.107.zip
+    ✔ Browser application bundle generation complete.
+    
+    Initial Chunk Files | Names         |      Size  
+    vendor.js           | vendor        |   2.36 MB  
+    polyfills.js        | polyfills     | 128.83 kB  
+    main.js             | main          |  56.23 kB  
+    runtime.js          | runtime       |   6.15 kB  
+    styles.css          | styles        | 119 bytes
+    
+                        | Initial Total |   2.54 MB
+    
+    Build at: 2021-08-29T19:18:41.513Z - Hash: 7253eb4f2b7088370a2b - Time: 8046ms
+    
+    ** Angular Live Development Server is listening on localhost:4200, open your browser on     http://localhost:4200/ **
+    
+    
+    √ Compiled successfully.
+    [16:18:42] I/launcher - Running 1 instances of WebDriver
+    DevTools listening on ws://127.0.0.1:58077/devtools/browser/    da009a43-1195-44a1-b35f-e73b2a693f88
+    [10524:10948:0829/161847.423:ERROR:device_event_log_impl.cc(214)] [16:18:47.423] USB:     usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: Um     dispositivo conectado ao sistema nÒo estß funcionando.     (0x1F)                                                                                                                      8 Failed to read descriptor from n
+    Jasmine started
+    [16:18:51] W/element - more than one element found for locator By(css selector, app-root .    content span) - the first result will be     used                                                                                                 t result will be used
+    
+      workspace-project App
+        √ should display welcome message
+    
+    Executed 1 of 1 spec SUCCESS in 0.828 sec.
+    [16:18:51] I/launcher - 0 instance(s) of WebDriver still running
+    [16:18:51] I/launcher - chrome #01 passed
+    
+
+<h3>node_modules</h3>
+
+<h3>src</h3>
 
 
 <h2>Aplicações Angular: O Essencial</h2>
