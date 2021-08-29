@@ -6,7 +6,6 @@
 
 <img src="https://img.shields.io/static/v1?label=Angular&message=Framework&color=red&style=for-the-badge&logo=Angular"/>
 
-<<<<<<< HEAD
 
 O Angular é um framework Typescript utilizado para desenvolver aplicações no client-side, desenvolvido e mantido pela equipe da Google. Com uma estrutura que permite uma grande diversidade de usos, é bastante comum encontrar o Angular,em alguma de suas versões, presente em diversos tipos de aplicações, sendo mais comum encontrá-lo em SPA Applications.
   
@@ -18,8 +17,10 @@ Assim como qualquer plataforma de desenvolvimento, o Angular possui uma estrutur
 
 
     - Uma estrutura de desenvolvimento baseada em components
-    - Uma collection de bibliotecas que cobrem uma variedade de features, incluindo roteamento, gerenciamento de fomulários, comunicação client-server e muito mais
-    - Um conjunto de ferramentas de desenvolvimento para ajudar a desenvolver, construir, testar e atualizar seu código. Sendo uma delas uma CLI própria
+    - Uma collection de bibliotecas que cobrem uma variedade de features, incluindo roteamento,
+    gerenciamento de fomulários, comunicação client-server e muito mais
+    - Um conjunto de ferramentas de desenvolvimento para ajudar a desenvolver, construir, testar
+    e atualizar seu código. Sendo uma delas uma CLI própria
 
 
 <h3>Angular CLI (Instalação)</h3>
