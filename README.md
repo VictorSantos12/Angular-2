@@ -109,7 +109,197 @@ O resultado deve ser aproximadamente o seguinte:
 
 <h3>node_modules</h3>
 
-<h3>src</h3>
+
+O <b><i>node_modules</i></b> é uma folder comum a aplicações que fazem uso do Javascript, ou como nesse caso, do Typescript. Ela conta com uma série de pacotes e bibliotécas com inúmeras funcionalidades que são gerenciados pelo NPM, manager sobre o qual falaremos mais a frente. 
+
+Basicamente tudo o que será incluído como parte de um projeto posterirmente é obtido da node_modules folder.
+
+
+<h2>src</h2>
+
+
+A <b><i>src</i></b> é a main folder da aplicação. É nela que são estruturados todos os componets e modulos da aplicação, além da estrutura de routing, style sheet e é onde está o index.html do projeto. Ela se divide nas pastas e arquivos a seguir:
+
+
+<h2>app</h2>
+
+
+A app folder carrega consigo o que seria o main component ou o main module do projeto. Nela temos acesso a file de routing da aplicação e ao controle de modules, além dos arquivos que compõem qualquer módulo em geral:
+
+
+<h3>app-routing.module.ts</h3>
+
+
+Este arquivo só estrá presente na sua versão caso você tenha definido a isntação do Angular routing ao criar o projeto. É nele que definimos as rotas e seus respectivos components.
+
+
+<h3>app.component.css</h3>
+
+
+É o arquivo onde definmos o style sheet de um módulo em específico. Com isso é possível ter uma estrutura desacoplada e components seaprados.
+
+
+<h3>app.component.html</h3>
+
+
+Consiste no template único que cada component possui, e também mantem a lógica de estrutura desacoplada citada acima.
+
+
+<h3>app.component.spec.ts</h3>
+
+
+É o arquivo de teste unitário que cada components precisa ter para ser incluído na estrutura do Karma.conf.js.
+
+
+<h3>app.module.ts</h3>
+
+
+Arquivos de gerenciamento dos modules que correspondem as partes do projeto. Todos os modulos e importações da aplicação são declarados no app.module.ts.
+
+
+<h3>assets</h3>
+
+
+É o diretório que permite manipular arquivos extras que serão usados na aplicação, como imagens, fontes e entre outros.
+
+
+<h3>environments</h3>
+
+
+A pasta de environments, ou ambientes, basicamente identifica em que ambiente a aplicação está em run, se em produção(environments.prod.ts) ou desenvolvimento(environments.ts). A única diferença entre esses arquivos é a atribuição que é dada a variável <b>production</b>, que é logicamente true em para produção e false para desenvolvimento.
+
+
+<h3>index.html</h3>
+
+
+Arquivo de marcação root definido na angular.json file, aonde toda a aplicação começa a ser renderizada.
+
+
+<h3>main.ts</h3>
+
+
+Arquivo principal da Solution, definido na angular.json file.
+
+
+<h3>polyfills.ts</h3>
+
+
+Arquivo que age como um tradutos, com o qual é possível utilizar recurstos do ES6, por exemplo, em navegores que só compilam o ES5, além de variás outras funcionalidades.
+
+
+<h3>styles.css</h3>
+
+
+Arquivo de style sheet global da aplicação.
+
+
+<h3>test.ts</h3>
+
+
+O test.ts é exigido no karma.conf.js e carrega recursivamente todos os arquivos .spec e framework.
+
+
+<h3>.browserslistrc</h3>
+
+
+O arquivo <b>.browserslistrc</b> é utilizado pelo build system para ajustar tanto CSS quanto Javascript aos navegadores listados. Esses navegadores são:
+
+
+    last 1 Chrome version
+    last 1 Firefox version
+    last 2 Edge major versions
+    last 2 Safari major versions
+    last 2 iOS major versions
+    Firefox ESR
+
+
+O browserslistrc também permite verificar quais versões dos navegadores são contempladas pela Angular CLI. Para isso, use o comando a seguir:
+
+
+    npx browserslist
+
+
+O resultado deve ser semelhante ao seguinte:
+
+
+    npx: installed 6 in 3.665s
+    and_chr 92
+    and_ff 90        
+    and_qq 10.4      
+    and_uc 12.12     
+    android 92       
+    baidu 7.12       
+    chrome 92        
+    chrome 91        
+    chrome 90        
+    edge 92
+    edge 91
+    firefox 91       
+    firefox 90       
+    firefox 89       
+    firefox 78       
+    ie 11
+    ios_saf 14.5-14.7
+    ios_saf 14.0-14.4
+    kaios 2.5        
+    op_mini all      
+    op_mob 64
+    opera 78
+    opera 77
+    safari 14.1
+    safari 14
+    safari 13.1
+    samsung 14.0
+    samsung 13.0
+
+
+<h3>.editorconfig</h3>
+
+
+A <b>.editorconfig</b> é um gerenciador de configurações de texto, que ajuda a manter padrões de escrita e identação consistentes para multiplos desenvolvedores trabalhando no mesmo projeto em IDEs distintas.  
+
+
+<h3>.gitignore</h3>
+
+
+O <b>.gitignore</b> é utilizado no processo de gerenciamento de versão de um projeto. Cada identificador listado neste arquivo define que seu correspondente no diretório será ignorado caso um commit seja feito.
+
+
+<h3>angular.json</h3>
+
+
+O <b>angular.json</b> configura o workspace padrão citado anteriormente. É basicamente um json que relaciona e identifica cada arquivo da estrutura, onde são citadas a versão do projeto e entre outras informações.
+
+
+<h3>karma.config.js</h3>
+
+
+O <b>karma.config.js</b> é uma biblioteca utilizada para criação de testes unitários desenvolvida pela própria equipe do Angular.
+
+
+<h3>package-lock.json</h3>
+
+
+O <b>package-lock.json</b> descreve as dependências usadas no projeto, dando informações como a versão instalada, links de verificação da integridade dessas dependências e dentre outras coisas.
+
+
+<h3>package.json</h3>
+
+
+O <b>package.json</b> é um arquivo de configuração utilizado para estipular e configurar as dependências do projeto, além de listar estruturas importantes como os scripts que podem ser executados dentro da aplicação e dividir dependencies de devDependencies.
+
+
+<h3>tsconfig.app.json... </h3>
+
+
+Tanto o <b>tsconfig.app.json</b> quanto os arquivos subsequentes são arquivos que configuram o Typescript e diferentes escalas dentro do porjeto.
+
+
+<h3>tsconfig.json</h3>
+
+
+O <b>tsconfig.json</b> possui função semelhante ao tsconfig.app.json, porém, é mais generalista.
+
 
 
 <h2>Aplicações Angular: O Essencial</h2>
