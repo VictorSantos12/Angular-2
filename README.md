@@ -91,7 +91,8 @@ O resultado deve ser aproximadamente o seguinte:
     
     Build at: 2021-08-29T19:18:41.513Z - Hash: 7253eb4f2b7088370a2b - Time: 8046ms
     
-    ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+    ** Angular Live Development Server is listening on localhost:4200, open your browser on
+    http://localhost:4200/ **
     
     
     √ Compiled successfully.
