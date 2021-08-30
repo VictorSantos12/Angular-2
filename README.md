@@ -334,7 +334,8 @@ Por ser um framework modular, o Angular possui uma estrutura completa para criar
 No my-app project é possível ter acesso ao módulo raiz, que é criado seguindo o modelo de estrutura do Angular modular. A seguir há uma definição básica para os metadados que compõem o módulo raiz:
 
 
-    - declarations: O declarations é um array que lista todos os components, directives e pipes que serão utilizados no  módulo raiz.
+    - declarations: O declarations é um array que lista todos os components, directives e pipes
+      que serão utilizados no  módulo raiz.
 
     - imports: Lista de outros módulos, os quais serão utilizados em algum component ou no próprio módulo.
 
