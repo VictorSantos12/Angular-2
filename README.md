@@ -304,7 +304,7 @@ A seguir iremos entrar em contanto com as estruturas mais básicas da composiç�
 <h2>@NgModule</h2>
 
 
-Por ser um framework modular, o Angular possui uma estrutura completa para criar e manutenir estes módulos. Um módulo é composto por uma function <b><i>@NgModule()</i></b> decorator, cuja função é conter components, directives, pipes e providers. A seguir temos um exemplo de declaração de uma @NgModule:
+Por ser um framework modular, o Angular possui uma estrutura completa para criar e manutenir módulos. Um módulo é composto por uma function <b><i>@NgModule()</i></b> decorator, cuja função é conter components, directives, pipes e providers. A seguir temos um exemplo de declaração de uma @NgModule:
 
 
     import { NgModule } from '@angular/core';
@@ -389,7 +389,7 @@ O model de um Angular component oferece um forte encapsulamento e uma estrutura 
 <h2>@Injectable</h2>
 
 
-Uma classe declarada Injectable possui dependências que serão injetadas em seu constructor quando o injetor de dependências criar uma instância desta classe. Isso garante que os metadados necessários para criar as dependências dessa classe serão gerados. O exemplo a seguir mostra uma estrutura base de uma classe Injectable:
+Uma classe declarada Injectable possui dependências que serão injetadas em seu constructor quando o injetor de dependências criar uma instância desta classe. Isso garante que os metadados necessários para criar as dependências da mesma serão gerados. O exemplo a seguir mostra a estrutura base de uma classe Injectable:
 
 
     import { Injectable } from '@angular/core';
@@ -401,7 +401,7 @@ Uma classe declarada Injectable possui dependências que serão injetadas em seu
 <h2>@Directive</h2>
 
 
-Directives são classes que atribuem comportamento extra a elementos em uma aplicação Angular, com as quais é possível gerenciar formulários, listas, styles, e a interface em si. A seguir a exemplo de declaração de uma Directive class:
+Directives são classes que atribuem comportamento extra a elementos em uma aplicação Angular, com as quais é possível gerenciar formulários, listas, styles, e a interface em si. A seguir temos um exemplo de declaração de uma Directive class:
 
 
     import { Directive } from ‘@angular/core’;
@@ -428,7 +428,7 @@ Directives são classes que atribuem comportamento extra a elementos em uma apli
 <h2>@Pipe</h2>
 
 
-Pipes são recursos bastante úteis para o Angular. Eles são basicamente macanismos simples que transformam e retornam valores de acordo com os parâmetros declarados. A seguir a exemplo de declaração de um Pipe: 
+Pipes são recursos bastante úteis para o Angular. Eles são basicamente macanismos simples que transformam e retornam valores de acordo com os parâmetros declarados. A seguir temos um exemplo de declaração de um Pipe: 
 
 
     import { Pipe } from ‘@angular/core’;
