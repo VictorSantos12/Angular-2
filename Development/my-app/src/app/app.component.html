@@ -1,10 +1,13 @@
 
-<div>
- <p>{{ value }}</p>
+<div *ngIf="songs.length > 0">
+ Lista de músicas
+  <ul>
+    <li *ngFor="let song of songs">
+      {{ song }}
+    </li>
+  </ul>
 </div>
 
-<div>
-  <button onclick="add()">
-    Click
-  </button>
+<div *ngIf="songs.length == 0">
+ A lista de músicas está vazia
 </div>

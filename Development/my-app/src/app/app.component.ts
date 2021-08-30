@@ -6,11 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-  value = 0
-
-  add() {
-    this.value++
-  }
+  
+  songs: string[] = ['Children of the Grave', 'Panaroid', 'Immigrant Song'];
 
 }
