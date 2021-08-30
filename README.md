@@ -365,7 +365,6 @@ A seguir temos um exemplo da estrutura mínima de um Angular component:
     })
 
     export class MyComponent {
-       
 	    
     }
 
@@ -399,6 +398,34 @@ O Angular possui uma forte presença da Orientação a Objetos em sua estrutura 
 
 
 O model de um Angular component oferece um forte encapsulamento e uma estrutura intuitiva. 
+
+
+<h3>Template</h3>
+
+
+Todo component possui um template HTML que declara como esse component será renderizado. É possível declarar um template em inline ou usando um path de um arquivo separado, que é algo mais comum. Além disso, o Angular adiciona funcionalidades a sintaxe do HTML que permitem a inserção de valores dinâmicos vindos do component. Com isso, o DOM sofre um update cada vez que houver uma atualização do state do component. Para entender melhor o conceito, faça as seguintes modificações no my-app criado anteriormente:
+
+No arquivo <i>app.component.ts</i> faça a seguinte alteração:
+
+
+    import { Component } from '@angular/core';
+
+    @Component({
+      selector: 'app-root',
+      templateUrl: './app.component.html',
+    })
+    export class AppComponent {
+      message = 'Hello, World!';
+    }
+
+
+Remova todo o HTML do arquivo <i>app.component.html</i> e inclua a tag a seguir:
+
+
+    <p>{{ message }}</p>
+
+
+Ao rodar a aplicação temos a mensagem contida no atributo <i>message</i> em tela. Caso essa mensagem seja modificada, a aplicação irá fazer um rerender da tela, atualizando a mensagem.
 
 
 <h2>@Injectable</h2>
