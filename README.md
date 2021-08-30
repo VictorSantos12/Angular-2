@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/static/v1?label=Angular&message=Framework&color=red&style=for-the-badge&logo=Angular"/>
 
 
-O Angular é um framework Typescript utilizado na criação de aplicações client-side, desenvolvido e mantido pela equipe da Google. Com uma estrutura que permite uma grande diversidade de usos, é bastante comum encontrá-lo em SPA Applications e aplicações Web no geral. 
+O Angular é um framework Typescript utilizado na criação de aplicações client-side, desenvolvido e mantido pela equipe da Google. Com uma estrutura que permite uma grande diversidade de usos, é bastante comum encontrá-lo em SPA Applications ou aplicações Web no geral. 
 
 A popularidade da ferramenta vem crescendo cada vez mais nos últimos anos, estando lado a lado de outros como o React e o Vue.js, além de possuir um crescente ecosistema formado por mais de 1.7 milhão de desenvolvedores, autores de bibliotecas e criadores de conteúdo.
 
@@ -19,7 +19,7 @@ Assim como qualquer plataforma de desenvolvimento, o Angular possui uma estrutur
 
 
 * Uma estrutura de desenvolvimento baseada em components
-* Uma collection de bibliotecas que cobrem uma variedade de features, incluindo roteamento, gerenciamento de fomulários, comunicação client-server e muito mais
+* Uma collection de bibliotecas que abrangem uma variedade de features, incluindo roteamento, gerenciamento de fomulários, comunicação client-server e muito mais
 * Um conjunto de ferramentas de desenvolvimento para ajudar a construir, testar e atualizar seu código. Sendo uma delas a Angular CLI
 
 
@@ -35,7 +35,7 @@ A Angular CLI é essencial no processo de criação dos projetos e no gerenciame
 <h2>Criando uma Aplicação</h2>
 
 
-O desenvolvimento de aplicações Angular é feito no contexto de um workspace customizável, que por padão, já possui uma estrutura mínima para uso. Essa estrutura será utilizada no processo de entendimento dos conceitos essenciais do framework. O workspace será abordado de forma aprofundada no futuro. 
+O desenvolvimento de aplicações Angular é feito no contexto de um workspace customizável, que por padão, já possui uma estrutura mínima para uso. Essa estrutura será utilizada no processo de entendimento dos conceitos essenciais do framework. O workspace, por sua vez, será abordado de forma aprofundada no futuro. 
 
 Para criar uma aplicação Angular do zero, torne a acessar o terminal de comando e faça o run do comando a seguir no diretório desejado:
 
@@ -63,7 +63,7 @@ Com uma aplicação em mãos, é importante se fazer ciente de como a mesma se d
 <h2>e2e</h2>
 
 
-O primeiro arquivo que a Angular CLI disponibiliza é o <b>e2e</b>, que define uma estrutura de testes unitários para a aplicação crida. Ele conta com uma pasta src e três arquivos principais <b>app.e2e-spec.ts</b>, <b>app.po.ts</b> e <b>tsconfig.e2e.json</b>, cada um possuindo uma funcionalidade na estrutura de testes. 
+A primeira folder que a Angular CLI disponibiliza é a <b>e2e</b>, que define uma estrutura de testes unitários utilizando Selenium para a aplicação crida. Ela conta com uma pasta src e três arquivos principais: <b>app.e2e-spec.ts</b>, <b>app.po.ts</b> e <b>tsconfig.e2e.json</b>, cada um possuindo uma funcionalidade na estrutura de testes. 
 
 Para executar o teste padão que a Angular CLI cria, use o comando a seguir no diretório do projeto:
 
@@ -71,7 +71,7 @@ Para executar o teste padão que a Angular CLI cria, use o comando a seguir no d
     ng e2e
 
 
-O resultado deve ser aproximadamente o seguinte:
+O resultado deve ser próximo ao seguinte:
 
 
     [16:18:23] I/file_manager - creating folder     
@@ -110,7 +110,7 @@ O resultado deve ser aproximadamente o seguinte:
 <h2>node_modules</h2>
 
 
-O <b><i>node_modules</i></b> é uma folder comum a aplicações que fazem uso do Javascript. Ela conta com uma série de pacotes e bibliotecas com inúmeras funcionalidades que são gerenciados pelo NPM, manager sobre o qual falaremos mais a frente. 
+A <b><i>node_modules</i></b> é uma folder comum a aplicações que fazem uso do Javascript. Ela conta com uma série de pacotes e bibliotecas com inúmeras funcionalidades que são gerenciados pelo NPM, manager sobre o qual falaremos mais a frente. 
 
 Basicamente tudo o que será incluído como parte de um projeto é obtido da node_modules folder.
 
@@ -136,7 +136,7 @@ Este arquivo só estará presente na sua versão caso você tenha definido a ins
 <h3>app.component.css</h3>
 
 
-É o arquivo aonde definimos o style sheet de um módulo em específico. Com isso é possível ter uma estrutura desacoplada e components separados.
+É o arquivo onde definimos o style sheet de um módulo em específico. Com isso é possível ter uma estrutura desacoplada e components separados.
 
 
 <h3>app.component.html</h3>
@@ -172,7 +172,7 @@ A pasta de environments, ou ambientes, basicamente identifica em que ambiente a 
 <h3>index.html</h3>
 
 
-Arquivo de marcação root definido na angular.json file, aonde toda a aplicação começa a ser renderizada.
+Arquivo de marcação root definido na angular.json file, onde toda a aplicação começa a ser renderizada.
 
 
 <h3>main.ts</h3>
@@ -184,7 +184,7 @@ Arquivo principal da Solution, definido na angular.json file.
 <h3>polyfills.ts</h3>
 
 
-Arquivo que age como um tradutor, com o qual é possível utilizar recursos do ES6, por exemplo, em navegores que só compilam o ES5, além de variás outras funcionalidades.
+Arquivo que age como um tradutor, com o qual é possível utilizar recursos do ES6, por exemplo, em navegores que só compilam o ES5, além de várias outras funcionalidades.
 
 
 <h3>styles.css</h3>
@@ -196,7 +196,7 @@ Arquivo de style sheet global da aplicação.
 <h3>test.ts</h3>
 
 
-O test.ts é exigido no karma.conf.js e carrega recursivamente todos os arquivos .spec e framework.
+O test.ts é exigido no karma.conf.js e carrega recursivamente todos os arquivos .spec do framework.
 
 
 <h3>.browserslistrc</h3>
@@ -219,7 +219,7 @@ O browserslistrc também permite verificar quais versões dos navegadores são c
     npx browserslist
 
 
-O resultado deve ser semelhante ao seguinte:
+O resultado deve ser próximo ao seguinte:
 
 
     npx: installed 6 in 3.665s
@@ -295,16 +295,40 @@ O <b>package.json</b> é um arquivo de configuração utilizado para estipular e
 Tanto o <b>tsconfig.app.json</b> quanto os arquivos subsequentes são arquivos que configuram o Typescript e diferentes escalas dentro do porjeto.
 
 
-<h2>Aplicações Angular: O Essencial</h2>
+<h1>Aplicações Angular: O Essencial</h1>
   
 
-A seguir iremos entrar em contanto com as estruturas mais básicas da composição de uma aplicação desenvolvida com o Angular. É essencial entender essa estrutura antes de abordarmos aspectos diretamente ligados ao desenvolvimento.
+A seguir iremos entrar em contanto com as estruturas mais básicas da composição de uma aplicação desenvolvida com o Angular. É essencial entender essa estrutura antes de abordarmos aspectos diretamente ligados ao desenvolvimento de projetos.
 
 
-<h2>Components</h2>
+<h2>@NgModule</h2>
+
+
+Por ser um framework modular, o Angular possui uma estrutura completa para criar e manutenir estes módulos. Um módulo é composto por uma function <b><i>@NgModule()</i></b> decorator, cuja função é conter components, directives, pipes e providers. A seguir temos um exemplo de declaração de uma @NgModule:
+
+
+    import { NgModule } from '@angular/core';
+
+
+    @NgModule({
+
+    declarations:[Component1, Component2],
+
+    imports: [Module1, Module2],
+
+    exports: [MyModule],
+
+    providers: [Service1, Service2],
+
+    bootstrap: [AppComponent]})
+
+    class MyModule {}
+
+
+<h2>@Component</h2>
   
 
-Components são os blocos que sustentam uma aplicação. Um component inclui uma class TypeScript com um <b><i>@Component()</i></b> decorator, um template HTML e um style sheet. O decorator <b><i>@Component()</i></b> define as seguintes especificações:
+Components são os blocos que sustentam uma aplicação. Um component inclui uma TypeScript class com um <b><i>@Component()</i></b> decorator, um template HTML e um style sheet. O decorator <b><i>@Component()</i></b> define as seguintes especificações:
 
 
  - Um template HTML que instrui o Angular a como rederizar o component
@@ -331,13 +355,7 @@ A seguir temos um exemplo da estrutura mínima de um Angular component:
     }
 
 
-<h2>Decorator</h2>
-
-
-Decorators são funções utilizadas por componentes, modules e por services. Eles definem seu tipo e a conexão com os dados, estrutura e lógica, sendo algo como a estrutura física do component, identificando a classe imediatamente a baixo como um componente.
-
-
-<h2>Seletor</h2>
+<h3>Selector</h3>
 
 
 Um seletor define a hierarquia de uso das propriedades de um componente dentro de um template, o referenciando com o uso de uma tag HTML que leva sua marcação. O componente que carrega o seletor de outro passa a ser parent do mesmo. para utilizar o component criado anteriormente use:
@@ -354,7 +372,7 @@ Ao renderizar o component anteriormente criado, teriamos o seguinte resultado:
     </my-component>
 
 
-<h2>Class</h2>
+<h3>Class</h3>
 
 
 O Angular possui uma forte presença da Orientação a Objetos em sua estrutura base, sendo assim, uma das partes mais importantes de um component é a sua classe. Esta define todo e qualquer comportamento que ele virá a ter:
@@ -362,10 +380,118 @@ O Angular possui uma forte presença da Orientação a Objetos em sua estrutura 
 	
     export class MyComponent {
 
-     }
+    }
 
 
 O model de um Angular component oferece um forte encapsulamento e uma estrutura intuitiva. 
+
+
+<h2>@Injectable</h2>
+
+
+Uma classe declarada Injectable possui dependências que serão injetadas em seu constructor quando o injetor de dependências criar uma instância desta classe. Isso garante que os metadados necessários para criar as dependências dessa classe serão gerados. O exemplo a seguir mostra uma estrutura base de uma classe Injectable:
+
+
+    import { Injectable } from '@angular/core';
+
+
+    @Injectable()
+
+
+<h2>@Directive</h2>
+
+
+Directives são classes que atribuem comportamento extra a elementos em uma aplicação Angular, com as quais é possível gerenciar formulários, listas, styles, e a interface em si. A seguir a exemplo de declaração de uma Directive class:
+
+
+    import { Directive } from ‘@angular/core’;
+
+    @Directive({
+
+    selector?: string
+
+    inputs?: string[]
+
+    outputs?: string[]
+
+    host?: {…}
+
+    providers?: Provider[]
+
+    exportAs?: string
+
+    queries?: {…}
+
+    })
+
+
+<h2>@Pipe</h2>
+
+
+Pipes são recursos bastante úteis para o Angular. Eles são basicamente macanismos simples que transformam e retornam valores de acordo com os parâmetros declarados. A seguir a exemplo de declaração de um Pipe: 
+
+
+    import { Pipe } from ‘@angular/core’;
+
+    @Pipe({
+
+    name: string
+
+    pure?: boolean
+
+    })
+
+
+<h2>@Input & @Output</h2>
+
+
+Tanto o @Input quanto o @Output definem mecanismos de comunicação entre components chamados parents e um ou mais child component. Sendo o @Input() responsável por permitir que um parent component faça updates em um child component, já o @Output() permite que child components enviem dados para seus parents.
+
+   
+    import { Input, Output } from ‘@angular/core’;
+
+    @Input({
+
+    bindingPropertyName?: string
+
+    })
+
+    @Output({
+
+    bindingPropertyName?: string
+
+    })
+
+
+<!-- <h2>@HostListener & @HostBinding</h2>
+
+
+Um @HostListener é um listener de eventos, que invoca uma função quando um evento é emitido pelo elemento declarado como HostListener. O @HostBinding declara uma ligação de propriedade host, onde um vínculo entre a propriedade e o elemento host é criada, e caso haja uma mudança na propriedade o elemento host será atualizado. Exemplo:
+
+
+    import {HostListener, Directive, HostBinding} from '@angular/core';
+    
+    @Directive({selector: '[myDir]'})
+    export class HostDirective {
+      @HostBinding('attr.role') role = 'admin'; 
+      @HostListener('click') onClick() {
+        this.role = this.role === 'admin' ? 'guest' : 'admin';
+      }
+    } -->
+
+
+<!-- <h2>@ContentChild</h2>
+
+
+<h2>@ContentChildren</h2>
+
+
+<h2>@ViewChild</h2>
+
+
+<h2>@ViewChildren</h2> -->
+
+
 
 
 <!-- <h2>Angular Routing</h2>
