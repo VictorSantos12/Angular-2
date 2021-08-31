@@ -110,9 +110,7 @@ O resultado deve ser próximo ao seguinte:
 <h2>node_modules</h2>
 
 
-A <b><i>node_modules</i></b> é uma folder comum a aplicações que fazem uso do Javascript. Ela conta com uma série de pacotes e bibliotecas com inúmeras funcionalidades que são gerenciados pelo NPM, manager sobre o qual falaremos mais a frente. 
-
-Basicamente tudo o que será incluído como parte de um projeto é obtido da node_modules folder.
+A <b><i>node_modules</i></b> é uma folder comum a aplicações que fazem uso do Javascript, é basicamente um repositório de funcionalidades úteis aos desenvolvedores. Ela conta com uma série de pacotes e bibliotecas com inúmeras funcionalidades que são gerenciados pelo NPM, manager sobre o qual falaremos mais a frente.
 
 
 <h2>src</h2>
@@ -379,7 +377,7 @@ O selector define a posição de uso de um component dentro da árvore de objeto
 
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/61476935/131503957-228fad00-e5ea-45ea-a73c-e620f977cdcf.png">
+  <img src="https://user-images.githubusercontent.com/61476935/131506137-081a14e7-db4e-4608-afd7-19c0887791fc.png">
 </div>
 
 
