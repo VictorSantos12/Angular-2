@@ -373,7 +373,7 @@ A seguir temos um exemplo da estrutura mínima de um Angular component:
 <h3>Selector</h3>
 
 
-O selector define a posição de uso de um component dentro da árvore de objetos DOM, o referenciando através de uma tag HTML que leva sua marcação, tornando este <i>Child</i> daquele que contenha esta tag. Essa estrutura permite criar a árvore de componentes que define a view da aplicação. A imagem a seguir ilustra como essa estrutura funciona:
+O selector define a posição de uso de um component dentro da árvore de objetos DOM, o referenciando através de uma tag HTML que leva sua marcação, tornando este <i>Child</i> daquele que contenha esta tag. Essa componentização permite criar a árvore de componentes que define a view da aplicação. A imagem a seguir ilustra como essa estrutura funciona:
 
 
 <div align="center">
@@ -384,7 +384,7 @@ O selector define a posição de uso de um component dentro da árvore de objeto
 Para incluir o exemplo anterior dentro da árvore de objetos DOM, usariamos seu selector da seguinte forma:
 
 
-    Ex: <my-component></my-compinent>
+    <my-component></my-compinent>
     
 
 Dentro do template onde fosse declarado, ele seria renderizado da seguinte forma:
@@ -396,12 +396,13 @@ Dentro do template onde fosse declarado, ele seria renderizado da seguinte forma
 <h3>Class</h3>
 
 
-O Angular possui uma forte presença da Orientação a Objetos em sua estrutura, sendo assim, uma das partes mais importantes de um component é a sua classe. Esta define todo e qualquer comportamento que ele virá a ter:
+O Angular possui uma forte presença da Orientação a Objetos em sua estrutura, sendo assim, uma das partes mais importantes de um component é a sua classe, cuja função é definir todo e qualquer comportamento que ele virá a ter. As classes Typescript são nomeadas seguindo a convensão de nomenclatura <i>camelCase</i>, além é claro da palavra-chave <i>class</i> e do modificador <i>export</i>, que possibilita a importação desta em outras partes da aplicação:
 
 	
     export class MyComponent {
         
         constructor() {}
+        
     }
 
 
