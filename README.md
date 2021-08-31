@@ -377,7 +377,7 @@ O selector define a posição de uso de um component dentro da árvore de objeto
 
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/61476935/131506137-081a14e7-db4e-4608-afd7-19c0887791fc.png">
+  <img src="https://user-images.githubusercontent.com/61476935/131503957-228fad00-e5ea-45ea-a73c-e620f977cdcf.png">
 </div>
 
 
