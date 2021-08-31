@@ -375,7 +375,15 @@ A seguir temos um exemplo da estrutura mínima de um Angular component:
 <h3>Selector</h3>
 
 
-Um seletor define a posição de uso decomponent dentro de um template presente na árvore DOM, o referenciando com o uso de uma tag HTML que leva sua marcação. O componente que carrega o seletor de outro passa a ser seu parent. Para incluir o exemplo anterior dentro da árvore de objetos DOM, usariamos seu selector da seguinte forma:
+O selector define a posição de uso de um component dentro da árvore de objetos DOM, o referenciando através de uma tag HTML que leva sua marcação, tornando este <i>Child</i> daquele que contenha esta tag. Essa estrutura permite criar a árvore de componentes que define a view da aplicação. A imagem a seguir ilustra como essa estrutura funciona:
+
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/61476935/131503957-228fad00-e5ea-45ea-a73c-e620f977cdcf.png">
+</div>
+
+
+Para incluir o exemplo anterior dentro da árvore de objetos DOM, usariamos seu selector da seguinte forma:
 
 
     Ex: <my-component></my-compinent>
@@ -432,7 +440,7 @@ O uso das chavez duplas {{ }} é chamado de interpolação, que é um recurso ut
 ...
 
 
-<h2>Directives</h2>
+<h2>@Directives</h2>
 
 
 Directives, ou diretivas, são classes que atribuem comportamento extra a elementos do template de um component, com as quais é possível gerenciar formulários, listas, styles, e a interface em si. A capacidade de criação de estruturas lógicas mediante a inclusão de diretivas no template de um component dá ao desenvolvedor uma capacidade imensa de manipulação do Document Object Model, criando assim uma interface muito mais interativa. As diretivas disponibilizadas pelo Angular são:
