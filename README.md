@@ -9,7 +9,7 @@
 
 O Angular é um framework Typescript utilizado na criação de aplicações client-side, desenvolvido e mantido pela equipe da Google. Com uma estrutura que permite uma grande diversidade de usos, é bastante comum encontrá-lo em SPA Applications ou aplicações Web no geral. 
 
-A popularidade da ferramenta vem crescendo cada vez mais nos últimos anos, estando lado a lado de outros como o React e o Vue.js, além de possuir um crescente ecosistema formado por mais de 1.7 milhão de desenvolvedores, autores de bibliotecas e criadores de conteúdo.
+A popularidade da ferramenta vem crescendo cada vez mais nos últimos anos, estando lado a lado de outras como o React e o Vue.js, além de possuir um crescente ecosistema formado por mais de 1.7 milhão de desenvolvedores, autores de bibliotecas e criadores de conteúdo.
 
      	
 <h2>Caracteristicas Básicas</h2>
@@ -26,16 +26,34 @@ Assim como qualquer plataforma de desenvolvimento, o Angular possui uma estrutur
 <h2>Angular CLI (Instalação)</h2>
 
 
-A Angular CLI é essencial no processo de criação dos projetos e no gerenciamento das development tasks, como teste, bundling e deployment. Para instalar e fazer uso de seus recursos, e para que seja possível acompanhar o processo de aprendizado, acesse um terminal de comando na sua máquina e use o comando a seguir:
+A Angular CLI é essencial no processo de criação dos projetos e no gerenciamento das development tasks, como teste, bundling e deployment. Mas, antes de fazer sua instalação, é importante ter o Node.js instalado, dada a necessidade de uso dos seus packages e da sua estrutura em aplicações Angular. A documentação a seguir mostra como obter a ferramenta, além de definir algumas características da mesma:
+
+
+[Node.js](https://github.com/VictorSantos12/Node.js)
+
+
+Tendo instalado o Node, acesse o cmd da sua máquina e use o comando a seguir:
 
 
     npm install -g @angular/cli
 
 
+<h2>Typescript</h2>
+
+
+Como já foi citado, o Angular é desenvolvido sobre a estrutura do Typescript(TS), sendo este um Superset do famoso ECMAScript. O TS é visto como uma otimização do Javascript, sendo mais robusto e se adequando a aspectos mais populares aos desenvolvedores. A inclusão da Orientação a Objetos, por exemplo, tornou possível a definição de variáveis tipadas, a criação de classes, e o uso dos demais aspectos que da POO, sendo uma das principais adições ao Javascript. O TS também é utilizado em outras ferramentas, como o React, além de aplicações server-side desencolvidas em Node. Para instalar e fazer uso da linsguagem, acesse o cmd da sua máquina e use o comando a seguir:
+
+
+    npm install -g typescript
+
+
+Para mais informações sobre o Typescript acesse: [typescript.org](https://www.typescriptlang.org/).
+
+
 <h2>Criando uma Aplicação</h2>
 
 
-O desenvolvimento de aplicações Angular é feito no contexto de um workspace customizável, que por padão, já possui uma estrutura mínima para uso. Essa estrutura será utilizada no processo de entendimento dos conceitos essenciais do framework. O workspace, por sua vez, será abordado de forma aprofundada no futuro. 
+O desenvolvimento de aplicações Angular é feito no contexto de um workspace customizável, que por padão, já possui uma estrutura mínima para uso, e essa estrutura será utilizada no processo de entendimento dos conceitos essenciais do framework. O workspace, por sua vez, será abordado de forma aprofundada no futuro. 
 
 Para criar uma aplicação Angular do zero, torne a acessar o terminal de comando e faça o run do comando a seguir no diretório desejado:
 
@@ -110,7 +128,7 @@ O resultado deve ser próximo ao seguinte:
 <h2>node_modules</h2>
 
 
-A <b><i>node_modules</i></b> é uma folder comum a aplicações que fazem uso do Javascript, é basicamente um repositório de funcionalidades úteis aos desenvolvedores. Ela conta com uma série de pacotes e bibliotecas com inúmeras funcionalidades que são gerenciados pelo NPM, manager sobre o qual falaremos mais a frente.
+A <b><i>node_modules</i></b> é uma folder comum a aplicações que fazem uso do Javascript, sendo basicamente um repositório de funcionalidades úteis aos desenvolvedores. Ela conta com uma série de pacotes e bibliotecas com inúmeros packages que são gerenciados pelo NPM, manager sobre o qual falaremos mais a frente.
 
 
 <h2>src</h2>
@@ -308,7 +326,7 @@ A seguir iremos entrar em contanto com as estruturas mais básicas da composiç�
 <h2>@NgModule</h2>
 
 
-Por ser um framework modular, o Angular possui uma estrutura completa para criar e manutenir módulos. Um módulo é composto por <b><i>@NgModule()</i></b> decorator, que define a classe imediatamente abaixo como um Module, e cuja função é conter todos os components, directives, pipes e providers da aplicação. A seguir temos um exemplo de declaração de um módulo raiz:
+Por ser um framework modular, o Angular possui uma estrutura completa para criar e manutenir módulos. Um módulo é composto por um <b><i>@NgModule()</i></b> decorator, que define a classe imediatamente abaixo como um Module, e cuja função é conter todos os components, directives, pipes e providers da aplicação. A seguir temos um exemplo de declaração de um módulo raiz:
 
 
     import { NgModule } from '@angular/core'; 
@@ -334,7 +352,7 @@ No my-app project é possível ter acesso ao módulo raiz, que é criado seguind
 
  - declarations: Lista de todos os components, directives e pipes que serão utilizados no módulo raiz.
  - imports: Lista de outros módulos, os quais serão utilizados em algum component ou no próprio módulo.
- - exports: O conjunto de components, directives e pipes declarados neste NgModule que podem ser usados ​​no modelo de qualquer componente que faça parte de um NgModule que importe este NgModule.
+ - exports: O conjunto de components, directives e pipes declarados neste NgModule que podem ser usados ​​no módelo de qualquer component que faça parte de um NgModule que importe este NgModule.
  - providers: Lista de serviços disponíveis para todos os components declarados no módulo.
  - bootstrap: Indica o component que será instanciado quando a aplicação iniciar o run.
 
