@@ -26,7 +26,7 @@ Assim como qualquer plataforma de desenvolvimento, o Angular possui uma estrutur
 <h2>Ambiente de Desenvolvimento</h2>
 
 
-O ambiente de desenvolvimento necessário para desenvolver utilizando o Angular demanda algumas instalação, portanto, para criar este ambiente, siga o passo a passo a seguir:
+O ambiente de desenvolvimento necessário para utilizar o Angular demanda algumas instalações, portanto, para criar este ambiente, siga o passo a passo a seguir:
 
 
 <h2>Node.js</h2>
