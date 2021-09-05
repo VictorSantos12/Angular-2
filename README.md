@@ -32,7 +32,7 @@ O ambiente de desenvolvimento necessário para utilizar o Angular demanda alguma
 <h2>Node.js</h2>
 
 
-Aplicações Web demandam o uso de uma série de recursos para diferentes funcionalidades, como packages e libs específicas. O Javascript, e por consequência aplicações que fazem uso deste, contam com o NPM(Node package manager) para tal. Sendo este um host de inúmeros packages que serão essenciais futuramente. Dada essa necessidade, a documentação a seguir mostra como obter o Node, além de definir algumas características sobre o mesmo:
+Aplicações Web demandam o uso de uma série de recursos para diferentes funcionalidades, como packages e libs específicas. O Javascript, e por consequência aplicações que fazem uso deste, contam com o NPM(Node package manager) para tal. Que nada mais é quem um host de inúmeros packages que são essenciais para criar uma aplicação. Dada essa necessidade, a documentação a seguir mostra como obter o Node, além de definir algumas características sobre o mesmo:
 
 
 [Node.js](https://github.com/VictorSantos12/Node.js)
@@ -41,7 +41,7 @@ Aplicações Web demandam o uso de uma série de recursos para diferentes funcio
 <h2>Typescript</h2>
 
 
-Como já foi citado, o Angular é desenvolvido sobre a estrutura do Typescript(TS), sendo este um Superset do famoso ECMAScript. O TS é visto como uma otimização do Javascript, sendo mais robusto e se adequando a aspectos mais populares aos desenvolvedores. A inclusão da Orientação a Objetos, por exemplo, tornou possível a definição de variáveis tipadas, a criação de classes, e o uso dos demais aspectos que da POO, sendo uma das principais adições ao Javascript. O TS também é utilizado em outras ferramentas, como o React, além de aplicações server-side desencolvidas em Node. Para instalar e fazer uso da linguagem, acesse o cmd da sua máquina e use o comando a seguir:
+Como já foi citado, o Angular é desenvolvido sobre a estrutura do Typescript(TS), sendo este um Superset do famoso ECMAScript. O TS é visto como uma otimização do Javascript, sendo mais robusto e se adequando a aspectos mais populares aos desenvolvedores. A inclusão da Orientação a Objetos, por exemplo, torna possível a definição de variáveis tipadas, a criação de classes, e o uso dos demais aspectos da POO, sendo uma das principais adições ao Javascript. O TS também é utilizado em outras ferramentas, como o React, além de aplicações server-side desencolvidas em Node. Para instalar e fazer uso da linguagem, acesse o cmd da sua máquina e use o comando a seguir:
 
 
     npm install -g typescript
@@ -50,7 +50,7 @@ Como já foi citado, o Angular é desenvolvido sobre a estrutura do Typescript(T
 Para mais informações sobre o Typescript acesse: [typescript.org](https://www.typescriptlang.org/).
 
 
-<h2>Angular CLI (Instalação)</h2>
+<h2>Angular CLI</h2>
 
 
 A Angular CLI é a ferramenta que permite a criação dos projetos e o gerenciamento das development tasks do Angular, como teste, bundling e deployment. Para obter a Angular CLI e fazer uso de seus recursos, acesse o cmd da sua máquina e use o comando a seguir:
@@ -118,7 +118,7 @@ Uma nova janela será aberta no seu navegador, nela a aplicação será lançada
 <h2>My-app</h2>
 
 
-Com uma aplicação em mãos, é importante se fazer ciente de como a mesma se divide, as funcionalidades e a razão da existência dos diretórios e arquivos que a compõem. A diante faremos um overview sobre cada um deles:
+Com uma aplicação em mãos, é importante se fazer ciente de como a mesma se divide, as funcionalidades e a razão da existência dos diretórios e arquivos que a compõem. A diante faremos um overview sobre os mais importantes dentre eles:
 
 
 <h2>e2e</h2>
@@ -731,6 +731,8 @@ Um @HostListener é um listener de eventos, que invoca uma função quando um ev
 
 <h2>@ViewChildren</h2> -->
 
+
+<h2>Automatizando</h2>
 
 
 A Angular CLI permite automatizar o processo de criação das suas estruturas através de comandos simples. Para gerar um novo módulo, basta acessar o diretório do projeto e fazer o run do comando a seguir:
