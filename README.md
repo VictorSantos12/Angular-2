@@ -735,12 +735,32 @@ Um @HostListener é um listener de eventos, que invoca uma função quando um ev
 <h2>Automatizando</h2>
 
 
-A Angular CLI permite automatizar o processo de criação das suas estruturas através de comandos simples. Para gerar um novo módulo, basta acessar o diretório do projeto e fazer o run do comando a seguir:
+A Angular CLI permite automatizar o processo de criação das suas estruturas através de comandos simples. Para gerar um novo módulo, component ou service basta acessar o diretório do projeto através do terminal e usar um dos comandos a seguir: 
+
+
+<h3>Module</h3>
 
 
     ng g m <nome>
 
 
+<h3>Component</h3>
+
+ 
+    ng g c <nome>
+
+
+<h3>Service</h3>
+
+   
+    ng g c <nome>
+
+
+Para criar uma dessas estruturas em uma folder específica, basta definir seu path de acesso dentro do projeto, como no exemplo a seguir:
+
+
+    ng g c folder-name/component-name
+    
 
 <!-- <h2>Angular Routing</h2>
 
