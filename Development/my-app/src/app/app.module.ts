@@ -7,6 +7,7 @@ import { NewComponent } from './scr/app/component/new/new.component';
 import { NewComponent } from './src/app/component/new-component.component.ts/new-component.component.ts.component';
 import { NewComponentComponent } from './src/app/new-component/new-component.component';
 import { OtherNewComponentComponent } from './components/other-new-component/other-new-component.component';
+import { NewPipe } from './new.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { OtherNewComponentComponent } from './components/other-new-component/oth
     NewComponent,
     NewComponent.Component.TsComponent,
     NewComponentComponent,
-    OtherNewComponentComponent
+    OtherNewComponentComponent,
+    NewPipe
   ],
   imports: [
     BrowserModule,

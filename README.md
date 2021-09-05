@@ -741,19 +741,31 @@ A Angular CLI permite automatizar o processo de criação das suas estruturas at
 <h3>Module</h3>
 
 
-    ng g m <nome>
+    ng g m <name>
 
 
 <h3>Component</h3>
 
  
-    ng g c <nome>
+    ng g c <name>
 
 
 <h3>Service</h3>
 
    
-    ng g c <nome>
+    ng g s <name>
+
+
+<h3>Class</h3>
+
+
+    ng g class <name>
+
+
+<h3>Interface</h3>
+
+
+    ng g i <name>
 
 
 Para criar uma dessas estruturas em uma folder específica, basta definir seu path de acesso dentro do projeto, como no exemplo a seguir:
